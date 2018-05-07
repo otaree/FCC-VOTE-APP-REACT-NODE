@@ -47,7 +47,39 @@ describe('authReducer', () => {
             name,
             email,
             token
-        })
+        });
+    });
+
+    it("should set error value", () => {
+        const value = "Auth Fail";
+
+        expect(authReducer(initialState, {
+            type: constants.AUTH_FAIL,
+            loading: false,
+            error: {
+                isError: true,
+                value
+            }
+        })).toEqual({
+            ...initialState,
+            error: {
+                isError: true,
+                value
+            }
+        });
+    });
+
+    it("should unset user's data", () => {
+        expect(authReducer({
+            ...initialState,
+            loading: true,
+            token: '123abc',
+            name: "Test",
+            email: "test@test.com",
+            userId: "1"
+        }, {
+            type: constants.AUTH_LOGOUT
+        })).toEqual(initialState);
     });
 });
 

@@ -29,6 +29,24 @@ export default (state=initialState, action) => {
                 email: action.email,
                 token: action.token
             };
+        case constants.AUTH_FAIL:
+            return {
+                ...state,
+                loading: action.loading,
+                error: action.error
+            };
+        case constants.AUTH_LOGOUT:
+            return {
+                token: null,
+                userId: null,
+                name: null,
+                email: null,
+                error: {
+                    isError: false,
+                    value: ''
+                },
+                loading: false
+            };
         default: 
             return state;
     }
