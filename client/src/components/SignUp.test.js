@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
+// import axios from 'axios';
+// import MockAdapter from 'axios-mock-adapter';
 
 import { SignUp } from './SignUp';
 
