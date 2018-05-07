@@ -79,7 +79,7 @@ export class SignUp extends React.Component {
             });
         }
 
-        if (isEmail(this.state.email.value)) {
+        if (!isEmail(this.state.email.value)) {
             error = true;
             
             this.setState(prevState => {
@@ -137,7 +137,7 @@ export class SignUp extends React.Component {
             <section>
                 {
                     this.props.authError.isError &&
-                    <div className="auth-server-fail">this.props.authError.value</div>
+                    <div className="auth-server-fail">{this.props.authError.value}</div>
                 }
                 <form className="form" onSubmit={this.submitHandler}>
                     <div>

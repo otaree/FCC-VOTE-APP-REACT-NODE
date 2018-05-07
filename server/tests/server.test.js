@@ -152,12 +152,12 @@ describe('SERVER', function () {
         });
     });
 
-    describe("GET /user/logout", () => {
+    describe("DELETE /user/logout", () => {
         it("should logout a user", done => {
             const token = users[0].tokens[0].token;
 
             request(app)
-                .get('/user/logout')
+                .delete('/user/logout')
                 .set('x-auth', token)
                 .expect(200)
                 .end(done);
@@ -167,7 +167,7 @@ describe('SERVER', function () {
             const token = "dfafafafasdfasdf";
 
             request(app)
-                .get('/user/logout')
+                .delete('/user/logout')
                 .set('x-auth', token)
                 .expect(401)
                 .end(done);

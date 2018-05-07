@@ -49,7 +49,7 @@ export class Login extends React.Component {
     validator = () => {
         let error = false;
 
-        if (isEmail(this.state.email.value)) {
+        if (!isEmail(this.state.email.value)) {
             error = true;
             
             this.setState(prevState => {
@@ -74,19 +74,7 @@ export class Login extends React.Component {
                 };
             });
         }
-
-        if (this.state.password.value !== this.state.password2.value) {
-            error = true;
-            
-            this.setState(prevState => {
-                return {
-                    password2: {
-                        value: prevState.password2.value,
-                        error: true
-                    }
-                };
-            });
-        }
+        
 
        return error;
     };
@@ -107,7 +95,7 @@ export class Login extends React.Component {
             <section>
                 {
                     this.props.authError.isError &&
-                    <div className="auth-server-fail">this.props.authError.value</div>
+                    <div className="auth-server-fail">{this.props.authError.value}</div>
                 }
                 <form className="form" onSubmit={this.submitHandler}>
                    <div>
@@ -156,7 +144,7 @@ const mapStateToProps = state => {
 const mapDispatchProps = dispatch => {
     return {
         login: (user) => dispatch(authActions.login(user)),
-        loginFail: () => dispatch(authActions.fail("Auth Error"))
+        loginFail: () => dispatch(authActions.fail("Invalid email/password"))
     };
 };
 

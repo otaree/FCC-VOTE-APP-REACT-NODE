@@ -1,10 +1,19 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+
+import Login from './Login';
+import SignUp from './SignUp';
+import Logout from './Logout';
 
 const Main = () => {
     return (
         <main>
-            <p>This is Main</p>
+           <Switch>
+               <Route path="/" exact render={() => <div>Home</div>} />
+               <Route path="/login" component={Login} />
+               <Route path="/signup" component={SignUp} />
+               <Route path="/logout" component={Logout} />
+           </Switch>
         </main>
     );
 };
