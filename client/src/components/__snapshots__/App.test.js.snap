@@ -17,9 +17,15 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <div>
-        <Header />
-        <Main />
+      "children": <div
+        className="App"
+>
+        <Header
+                isAuth={undefined}
+        />
+        <Main
+                isAuth={undefined}
+        />
 </div>,
     },
     "ref": null,
@@ -29,9 +35,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
-          <Main />,
+          <Header
+            isAuth={undefined}
+/>,
+          <Main
+            isAuth={undefined}
+/>,
         ],
+        "className": "App",
       },
       "ref": null,
       "rendered": Array [
@@ -39,7 +50,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "isAuth": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -48,7 +61,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "isAuth": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -64,9 +79,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <div>
-          <Header />
-          <Main />
+        "children": <div
+          className="App"
+>
+          <Header
+                    isAuth={undefined}
+          />
+          <Main
+                    isAuth={undefined}
+          />
 </div>,
       },
       "ref": null,
@@ -76,9 +97,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Header />,
-            <Main />,
+            <Header
+              isAuth={undefined}
+/>,
+            <Main
+              isAuth={undefined}
+/>,
           ],
+          "className": "App",
         },
         "ref": null,
         "rendered": Array [
@@ -86,7 +112,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
-            "props": Object {},
+            "props": Object {
+              "isAuth": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -95,7 +123,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
-            "props": Object {},
+            "props": Object {
+              "isAuth": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],

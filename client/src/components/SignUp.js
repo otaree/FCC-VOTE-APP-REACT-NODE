@@ -92,7 +92,7 @@ export class SignUp extends React.Component {
             });
         }
 
-        if (this.state.password.value < 6) {
+        if (this.state.password.value.length < 6) {
             error = true;
             
             this.setState(prevState => {
@@ -134,13 +134,13 @@ export class SignUp extends React.Component {
 
     render() {
         return (
-            <section>
+            <section className="auth">
                 {
                     this.props.authError.isError &&
                     <div className="auth-server-fail">{this.props.authError.value}</div>
                 }
                 <form className="form" onSubmit={this.submitHandler}>
-                    <div>
+                    <div className="form-control">
                         <input 
                             type="text"
                             placeholder="Username"
@@ -149,10 +149,10 @@ export class SignUp extends React.Component {
                         />
                         {
                             this.state.username.error &&
-                            <div>Please provide a username</div>
+                            <div className="auth-error">Please provide a username</div>
                         }
                     </div>
-                   <div>
+                    <div className="form-control">
                         <input 
                              type="email"
                              placeholder="Email"
@@ -161,10 +161,10 @@ export class SignUp extends React.Component {
                          />
                          {
                              this.state.email.error &&
-                             <div>Invalid email</div>
+                             <div className="auth-error">Invalid email</div>
                          }
                    </div>
-                   <div>
+                   <div className="form-control">
                         <input 
                              type="password"
                              placeholder="Password"
@@ -173,10 +173,10 @@ export class SignUp extends React.Component {
                          />
                          {
                              this.state.password.error &&
-                             <div>Invalid password</div>
+                             <div className="auth-error">Invalid password</div>
                          }
                    </div>
-                   <div>
+                   <div className="form-control">
                         <input 
                              type="password"
                              placeholder="Confirm Password"
@@ -185,11 +185,12 @@ export class SignUp extends React.Component {
                          />
                          {
                              this.state.password2.error &&
-                             <div>Passwords dose not match</div>
+                             <div className="auth-error">Passwords dose not match</div>
                          }
                    </div>
-                   <div>
+                   <div className="form-control">
                         <input 
+                            className="btn"
                              type="submit"
                              value="Register"
                          />

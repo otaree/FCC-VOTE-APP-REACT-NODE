@@ -31,10 +31,6 @@ ShallowWrapper {
                 component={[Function]}
                 path="/signup"
         />
-        <Route
-                component={[Function]}
-                path="/logout"
-        />
 </Switch>,
     },
     "ref": null,
@@ -56,10 +52,6 @@ ShallowWrapper {
           <Route
             component={[Function]}
             path="/signup"
-/>,
-          <Route
-            component={[Function]}
-            path="/logout"
 />,
         ],
       },
@@ -102,18 +94,6 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/logout",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
       ],
       "type": [Function],
     },
@@ -139,10 +119,6 @@ ShallowWrapper {
                     component={[Function]}
                     path="/signup"
           />
-          <Route
-                    component={[Function]}
-                    path="/logout"
-          />
 </Switch>,
       },
       "ref": null,
@@ -164,10 +140,6 @@ ShallowWrapper {
             <Route
               component={[Function]}
               path="/signup"
-/>,
-            <Route
-              component={[Function]}
-              path="/logout"
 />,
           ],
         },
@@ -205,18 +177,6 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "path": "/signup",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "path": "/logout",
             },
             "ref": null,
             "rendered": null,

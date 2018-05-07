@@ -37,7 +37,9 @@ ShallowWrapper {
           className="form"
           onSubmit={[Function]}
 >
-          <div>
+          <div
+                    className="form-control"
+          >
                     <input
                               onChange={[Function]}
                               placeholder="Username"
@@ -45,7 +47,9 @@ ShallowWrapper {
                               value=""
                     />
           </div>
-          <div>
+          <div
+                    className="form-control"
+          >
                     <input
                               onChange={[Function]}
                               placeholder="Email"
@@ -53,7 +57,9 @@ ShallowWrapper {
                               value=""
                     />
           </div>
-          <div>
+          <div
+                    className="form-control"
+          >
                     <input
                               onChange={[Function]}
                               placeholder="Password"
@@ -61,7 +67,9 @@ ShallowWrapper {
                               value=""
                     />
           </div>
-          <div>
+          <div
+                    className="form-control"
+          >
                     <input
                               onChange={[Function]}
                               placeholder="Confirm Password"
@@ -69,14 +77,18 @@ ShallowWrapper {
                               value=""
                     />
           </div>
-          <div>
+          <div
+                    className="form-control"
+          >
                     <input
+                              className="btn"
                               type="submit"
                               value="Register"
                     />
           </div>
 </form>,
       ],
+      "className": "auth",
     },
     "ref": null,
     "rendered": Array [
@@ -87,7 +99,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div>
+            <div
+              className="form-control"
+>
               <input
                             onChange={[Function]}
                             placeholder="Username"
@@ -95,7 +109,9 @@ ShallowWrapper {
                             value=""
               />
 </div>,
-            <div>
+            <div
+              className="form-control"
+>
               <input
                             onChange={[Function]}
                             placeholder="Email"
@@ -103,7 +119,9 @@ ShallowWrapper {
                             value=""
               />
 </div>,
-            <div>
+            <div
+              className="form-control"
+>
               <input
                             onChange={[Function]}
                             placeholder="Password"
@@ -111,7 +129,9 @@ ShallowWrapper {
                             value=""
               />
 </div>,
-            <div>
+            <div
+              className="form-control"
+>
               <input
                             onChange={[Function]}
                             placeholder="Confirm Password"
@@ -119,8 +139,11 @@ ShallowWrapper {
                             value=""
               />
 </div>,
-            <div>
+            <div
+              className="form-control"
+>
               <input
+                            className="btn"
                             type="submit"
                             value="Register"
               />
@@ -145,6 +168,7 @@ ShallowWrapper {
 />,
                 false,
               ],
+              "className": "form-control",
             },
             "ref": null,
             "rendered": Array [
@@ -180,6 +204,7 @@ ShallowWrapper {
 />,
                 false,
               ],
+              "className": "form-control",
             },
             "ref": null,
             "rendered": Array [
@@ -215,6 +240,7 @@ ShallowWrapper {
 />,
                 false,
               ],
+              "className": "form-control",
             },
             "ref": null,
             "rendered": Array [
@@ -250,6 +276,7 @@ ShallowWrapper {
 />,
                 false,
               ],
+              "className": "form-control",
             },
             "ref": null,
             "rendered": Array [
@@ -277,9 +304,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <input
+                className="btn"
                 type="submit"
                 value="Register"
 />,
+              "className": "form-control",
             },
             "ref": null,
             "rendered": Object {
@@ -287,6 +316,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "btn",
                 "type": "submit",
                 "value": "Register",
               },
@@ -314,7 +344,9 @@ ShallowWrapper {
             className="form"
             onSubmit={[Function]}
 >
-            <div>
+            <div
+                        className="form-control"
+            >
                         <input
                                     onChange={[Function]}
                                     placeholder="Username"
@@ -322,7 +354,9 @@ ShallowWrapper {
                                     value=""
                         />
             </div>
-            <div>
+            <div
+                        className="form-control"
+            >
                         <input
                                     onChange={[Function]}
                                     placeholder="Email"
@@ -330,7 +364,9 @@ ShallowWrapper {
                                     value=""
                         />
             </div>
-            <div>
+            <div
+                        className="form-control"
+            >
                         <input
                                     onChange={[Function]}
                                     placeholder="Password"
@@ -338,7 +374,9 @@ ShallowWrapper {
                                     value=""
                         />
             </div>
-            <div>
+            <div
+                        className="form-control"
+            >
                         <input
                                     onChange={[Function]}
                                     placeholder="Confirm Password"
@@ -346,14 +384,18 @@ ShallowWrapper {
                                     value=""
                         />
             </div>
-            <div>
+            <div
+                        className="form-control"
+            >
                         <input
+                                    className="btn"
                                     type="submit"
                                     value="Register"
                         />
             </div>
 </form>,
         ],
+        "className": "auth",
       },
       "ref": null,
       "rendered": Array [
@@ -364,7 +406,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div>
+              <div
+                className="form-control"
+>
                 <input
                                 onChange={[Function]}
                                 placeholder="Username"
@@ -372,7 +416,9 @@ ShallowWrapper {
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="form-control"
+>
                 <input
                                 onChange={[Function]}
                                 placeholder="Email"
@@ -380,7 +426,9 @@ ShallowWrapper {
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="form-control"
+>
                 <input
                                 onChange={[Function]}
                                 placeholder="Password"
@@ -388,7 +436,9 @@ ShallowWrapper {
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="form-control"
+>
                 <input
                                 onChange={[Function]}
                                 placeholder="Confirm Password"
@@ -396,8 +446,11 @@ ShallowWrapper {
                                 value=""
                 />
 </div>,
-              <div>
+              <div
+                className="form-control"
+>
                 <input
+                                className="btn"
                                 type="submit"
                                 value="Register"
                 />
@@ -422,6 +475,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
+                "className": "form-control",
               },
               "ref": null,
               "rendered": Array [
@@ -457,6 +511,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
+                "className": "form-control",
               },
               "ref": null,
               "rendered": Array [
@@ -492,6 +547,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
+                "className": "form-control",
               },
               "ref": null,
               "rendered": Array [
@@ -527,6 +583,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
+                "className": "form-control",
               },
               "ref": null,
               "rendered": Array [
@@ -554,9 +611,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <input
+                  className="btn"
                   type="submit"
                   value="Register"
 />,
+                "className": "form-control",
               },
               "ref": null,
               "rendered": Object {
@@ -564,6 +623,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "btn",
                   "type": "submit",
                   "value": "Register",
                 },

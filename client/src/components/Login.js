@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import isEmail from 'validator/lib/isEmail';
 import axios from 'axios';
 
-
 import * as authActions from '../store/actions/auth';
+import "./auth.css";
 
 export class Login extends React.Component {
     state = {
@@ -62,7 +62,7 @@ export class Login extends React.Component {
             });
         }
 
-        if (this.state.password.value < 6) {
+        if (this.state.password.value.length < 6) {
             error = true;
             
             this.setState(prevState => {
@@ -92,13 +92,13 @@ export class Login extends React.Component {
 
     render() {
         return (
-            <section>
+            <section className="auth">
                 {
                     this.props.authError.isError &&
                     <div className="auth-server-fail">{this.props.authError.value}</div>
                 }
                 <form className="form" onSubmit={this.submitHandler}>
-                   <div>
+                   <div className="form-control">
                         <input 
                              type="email"
                              placeholder="Email"
@@ -107,11 +107,12 @@ export class Login extends React.Component {
                          />
                          {
                              this.state.email.error &&
-                             <div>Invalid email</div>
+                             <div className="auth-error">Invalid email</div>
                          }
                    </div>
-                   <div>
+                   <div className="form-control">
                         <input 
+                            className="input"
                              type="password"
                              placeholder="Password"
                              value={this.state.password.value}
@@ -119,11 +120,12 @@ export class Login extends React.Component {
                          />
                          {
                              this.state.password.error &&
-                             <div>Invalid password</div>
+                             <div className="auth-error">Invalid password</div>
                          }
                    </div>
-                   <div>
+                   <div className="form-control">
                         <input 
+                            className="btn"
                              type="submit"
                              value="Login"
                          />
