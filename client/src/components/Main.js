@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './SignUp';
 import Logout from './Logout';
+import ChangePassword from './ChangePassword';
 
 const Main = (props) => {
     let switchRoutes = (
@@ -18,6 +19,7 @@ const Main = (props) => {
         switchRoutes = (
             <Switch>
                 <Route path="/" exact render={() => <div>Home</div>} />
+                <Route path="/password/change" component={ChangePassword} />                
                 <Route path="/logout" component={Logout} />
             </Switch>
         );
