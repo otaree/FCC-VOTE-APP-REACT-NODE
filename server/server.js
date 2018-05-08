@@ -75,6 +75,24 @@ app.delete('/user/logout', authenticate, async (req, res) => {
     }
 });
 
+app.patch('/user/password/change', authenticate, async (req, res) => {
+    const token = req.token;
+    const user = req.user;
+    const newPassword = req.body.password;
+    user.password = newPassword;
+
+    try {
+        const updatedUser = await user.save();
+        res.send(updatedUser) 
+        if (!updatedUser) {
+            throw "DID NOT UPDATE";
+        }
+        res.send(updatedUser);
+    } catch (e) {
+        res.status(400).send();
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`server is up at port ${port}`);

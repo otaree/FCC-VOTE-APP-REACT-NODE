@@ -174,4 +174,33 @@ describe('SERVER', function () {
         });
     });
 
+    describe("PATCH /user/password/change", () => {
+        it('should change a user password', done => {
+            const token = users[0].tokens[0].token;
+            const id = users[0]._id;
+
+            User.findById(id)
+                .then(user => {
+                    const original_password = user.password;
+
+                    request(app)
+                        .patch('/user/password/change')
+                        .send({ password: "somethingnew" })
+                        .set('x-auth', token)
+                        .expect(200)
+                        .end((err, res) => {
+                            if (err) return done(err);
+
+                            User.findById(id)
+                                .then(updatedUser => {
+                                    expect(updatedUser.password).to.not.equal(original_password);
+                                    done()
+                                })
+                                .catch(e => done(e));
+                        });  
+                })
+                .catch(e => done(e));
+        });
+    });
+
 });
