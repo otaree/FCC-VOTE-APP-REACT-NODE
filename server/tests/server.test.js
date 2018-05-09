@@ -5,11 +5,254 @@ const jwt = require('jsonwebtoken');
 
 const { app } = require('../server');
 const { User } = require('../models/User');
-const { users, populateUsers } = require('./seed/seed');
+const { Poll } = require('../models/Poll');
+const { users, populateUsers, polls, populatePolls, userOneId, userTwoId } = require('./seed/seed');
 
 describe('SERVER', function () {
     this.timeout(15000);
     beforeEach(populateUsers);
+    beforeEach(populatePolls);
+
+    describe('POST /poll', () => {
+        it('should create a new poll', done => {
+            const token = users[0].tokens[0].token;
+            const question = "New Poll";
+            const options = [{
+                value: "Yes"
+            }, {
+                value: "No"
+            }];
+
+            request(app)
+                .post('/poll')
+                .set("x-auth", token)
+                .send({ question, options })
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.question).to.equal(question);
+                    expect(res.body.options[0].value).to.equal(options[0].value);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.find({})
+                        .then(polls => {
+                            expect(polls.length).to.equal(3);
+                            done()
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should not create a new poll for invalid user', done => {
+            const token = "123abc"
+            const question = "New Poll";
+            const options = [{
+                value: "Yes"
+            }, {
+                value: "No"
+            }];
+
+            request(app)
+                .post('/poll')
+                .set("x-auth", token)
+                .send({ question, options })
+                .expect(401)
+                .end(done);
+        });
+
+        it('should not create a new poll for invalid poll data', done => {
+            const token = users[0].tokens[0].token;
+
+            request(app)
+                .post('/poll')
+                .set("x-auth", token)
+                .send({ })
+                .expect(400)
+                .end(done);
+        });
+    });
+
+    describe('GET /polls', () => {
+        it('should return all polls', done => {
+            request(app)
+                .get('/polls')
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.length).to.equal(2);
+                    expect(res.body[0].options[0].votes).to.equal(0);
+                })
+                .end(done);
+        });
+    });
+
+    describe('GET /poll/:id', () => {
+        it('should return a poll', done => {
+            const id = polls[0]._id.toHexString();
+            
+            request(app)
+                .get(`/poll/${id}`)
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.question).to.equal(polls[0].question)
+                })
+                .end(done);
+        });
+
+        it('should not return a poll for invalid id', done => {
+            const id = mongoose.Types.ObjectId().toHexString();
+            
+            request(app)
+                .get(`/poll/${id}`)
+                .expect(400)
+                .end(done);
+        });
+    });
+
+    describe('PATCH /poll/:id/vote', () => {
+        it('should be able to cast vote for first time voter', done => {
+            const userId = userOneId.toHexString();
+            const option = polls[1].options[0]._id.toHexString();
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .patch(`/poll/${id}/vote`)
+                .send({ userId, option })
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.options[0].votes).to.equal(2);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.findById(id)
+                        .then(poll => {
+                            expect(poll.options[0].votes).to.equal(2);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should not be able to cast vote for user who already casted vote a poll', done => {
+            const userId = userTwoId.toHexString();
+            const option = polls[1].options[0]._id.toHexString();
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .patch(`/poll/${id}/vote`)
+                .send({ userId, option })
+                .expect(400)
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.findById(id)
+                        .then(poll => {
+                            expect(poll.options[0].votes).to.equal(1);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should not be able to cast vote for invalid option id', done => {
+            const userId = userOneId.toHexString();
+            const option = mongoose.Types.ObjectId().toHexString()
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .patch(`/poll/${id}/vote`)
+                .send({ userId, option })
+                .expect(400)
+                .end(done);
+        });
+    });
+
+    describe('PATCH /poll/:id', () => {
+        it('should update a poll', done => {
+            const token = users[1].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+            const add = [{ value: "No reason" }];
+            const remove = [polls[1].options[1]];
+
+            request(app)
+                .patch(`/poll/${id}`)
+                .set('x-auth', token)
+                .send({ add, remove })
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.options.length).to.equal(2);
+                    expect(res.body.options[1].value).to.equal(add[0].value);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.findById(id)
+                        .then(poll => {
+                            expect(poll.options[1].value).to.equal(add[0].value);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should add options of a poll ', done => {
+            const token = users[1].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+            const add = [{ value: "No reason" }];
+
+            request(app)
+                .patch(`/poll/${id}`)
+                .set('x-auth', token)
+                .send({ add })
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.options.length).to.equal(3);
+                    expect(res.body.options[2].value).to.equal(add[0].value);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.findById(id)
+                        .then(poll => {
+                            expect(poll.options.length).to.equal(3);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should remove options of a poll ', done => {
+            const token = users[1].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+            const remove = [polls[1].options[1]];
+
+            request(app)
+                .patch(`/poll/${id}`)
+                .set('x-auth', token)
+                .send({ remove })
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.options.length).to.equal(1);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+                    Poll.findById(id)
+                        .then(poll => {
+                            expect(poll.options.length).to.equal(1);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should not update a poll', done => {
+            const token = users[1].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .patch(`/poll/${id}`)
+                .set('x-auth', token)
+                .send({  })
+                .expect(400)
+                .end(done)
+        });
+    });
 
     describe('POST /user', () => {
         it('should create a new user', done => {

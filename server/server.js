@@ -72,7 +72,7 @@ app.patch('/poll/:id/vote', async (req, res) => {
     const optionId = req.body.option;
     const userId = req.body.userId;
 
-    if (!ObjectId.isValid(id) || !ObjectId.isValid(optionId)) {
+    if (!ObjectId.isValid(id) || !ObjectId.isValid(optionId) || !ObjectId.isValid(userId)) {
         return res.status(400).send();
     }
 
@@ -104,7 +104,7 @@ app.patch('/poll/:id', authenticate, async (req, res) => {
             updatedPoll = await Poll.findOneAndUpdate({ _id: id, author: user._id }, { $push: { options: { $each: newOptions } } }, { new: true });
         }
         if (removeOptions) {
-            updatedPoll = await Poll.findOneAndUpdate({ _id: id, author: user._id }, { $pull: { options: { $or: removeOptions } } }, { new: true });            
+            updatedPoll = await Poll.findOneAndUpdate({ _id: id, author: user._id }, { $pullAll: { options: removeOptions } }, { new: true });            
         }
         if (!updatedPoll) throw "No Poll";
         res.send(updatedPoll);
@@ -194,4 +194,3 @@ app.listen(port, () => {
 });
 
 module.exports = { app };
-
