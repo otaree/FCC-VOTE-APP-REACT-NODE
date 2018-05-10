@@ -349,59 +349,59 @@ describe('Poll Actions', () => {
             });
         });
 
-        // describe("votePoll", () => {
-        //     it('should generate a async vote poll action and success', () => {
-        //         const token = '123abc567lk';
-        //         const response = polls[0];
+        describe("votePoll", () => {
+            it('should generate a async vote poll action and success', () => {
+                const userId = '50001';
+                const response = polls[0];
 
-        //         mock.onDelete(`http://localhost:5000/poll/${polls[0]._id}/vote`).reply(200, response);
+                mock.onPatch(`http://localhost:5000/poll/${polls[0]._id}/vote`).reply(200, response);
 
-        //         const expectedActions = [{
-        //             type: constants.POLL_LOADING,
-        //             loading: true
-        //         }, {
-        //             type: constants.POLL_SUCCESS,
-        //             loading: false,
-        //             error: {
-        //                 isError: false,
-        //                 value: ''
-        //             }
-        //         }];
+                const expectedActions = [{
+                    type: constants.POLL_LOADING,
+                    loading: true
+                }, {
+                    type: constants.POLL_SUCCESS,
+                    loading: false,
+                    error: {
+                        isError: false,
+                        value: ''
+                    }
+                }];
 
-        //         return store
-        //                 .dispatch(actions.deletePoll(token, polls[0]._id))
-        //                 .then((res) => {
-        //                     const dispatchedActions = store.getActions();
-        //                     expect(dispatchedActions[0]).toEqual(expectedActions[0]);
-        //                     expect(dispatchedActions[1]).toEqual(expectedActions[1]);
-        //                     expect(res).toEqual(polls[0]);
-        //                 });
-        //     });
+                return store
+                        .dispatch(actions.votePoll(polls[0]._id, polls[0].options[0]._id, userId))
+                        .then((res) => {
+                            const dispatchedActions = store.getActions();
+                            expect(dispatchedActions[0]).toEqual(expectedActions[0]);
+                            expect(dispatchedActions[1]).toEqual(expectedActions[1]);
+                            expect(res).toEqual(polls[0]);
+                        });
+            });
 
-        //     it('should generate a async delete poll action and fail', () => {
-        //         const token = '123abc567lk';
-        //         mock.onPost(`http://localhost:5000/poll/${polls[0]._id}/vote`).reply(400, {});
+            it('should generate a async vote poll action and fail', () => {
+                const userId = '50001';
+                mock.onPatch(`http://localhost:5000/poll/${polls[0]._id}/vote`).reply(400, {});
 
-        //         const expectedActions = [{
-        //             type: constants.POLL_LOADING,
-        //             loading: true
-        //         }, {
-        //             type: constants.POLL_FAIL,
-        //             loading: false,
-        //             error: {
-        //                 isError: true,
-        //                 value: 'Network Problem'
-        //             }
-        //         }];
+                const expectedActions = [{
+                    type: constants.POLL_LOADING,
+                    loading: true
+                }, {
+                    type: constants.POLL_FAIL,
+                    loading: false,
+                    error: {
+                        isError: true,
+                        value: 'Network Problem'
+                    }
+                }];
 
-        //         return store
-        //                 .dispatch(actions.deletePoll(token, polls[0]._id))
-        //                 .catch(() => {
-        //                     const dispatchedActions = store.getActions();
-        //                     expect(dispatchedActions[0]).toEqual(expectedActions[0]);
-        //                     expect(dispatchedActions[1]).toEqual(expectedActions[1]);
-        //                 });
-        //     });
-        // });
+                return store
+                        .dispatch(actions.votePoll(polls[0]._id, polls[0].options[0]._id, userId))
+                        .catch(() => {
+                            const dispatchedActions = store.getActions();
+                            expect(dispatchedActions[0]).toEqual(expectedActions[0]);
+                            expect(dispatchedActions[1]).toEqual(expectedActions[1]);
+                        });
+            });
+        });
     });
 });

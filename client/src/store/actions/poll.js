@@ -119,3 +119,18 @@ export const deletePoll = (token, id) => {
         }
     }
 };
+
+export const votePoll = (id, optionId, userId) => {
+    return async dispatch => {
+        dispatch(pollLoading());
+
+        try {
+            const response = await axios({ url: `http://localhost:5000/poll/${id}/vote`, method: "patch", data: { option: optionId, userId } });
+            dispatch(pollSuccess());
+            return response.data;
+        } catch (e) {
+            dispatch(pollFail("Network Problem"));
+            return Promise.reject();
+        }
+    }
+};
