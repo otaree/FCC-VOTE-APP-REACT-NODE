@@ -138,8 +138,8 @@ export class Login extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        authError: state.error,
-        loading: state.loading
+        authError: state.auth.error,
+        loading: state.auth.loading
     };
 };
 

@@ -29,8 +29,8 @@ export class Logout extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        authError: state.error,
-        token: state.token
+        authError: state.auth.error,
+        token: state.auth.token
     };
 };
 

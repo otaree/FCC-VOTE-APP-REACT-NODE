@@ -121,9 +121,9 @@ export class ChangePassword extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        authError: state.error,
-        loading: state.loading,
-        token: state.token
+        authError: state.auth.error,
+        loading: state.auth.loading,
+        token: state.auth.token
     };
 };
 
