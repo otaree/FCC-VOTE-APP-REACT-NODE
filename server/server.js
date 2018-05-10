@@ -113,6 +113,23 @@ app.patch('/poll/:id', authenticate, async (req, res) => {
     }
 });
 
+app.delete('/poll/:id', authenticate, async (req, res) => {
+    const user = req.user;
+    const id = req.params.id;
+
+    if (!ObjectId.isValid(id)) {
+        return res.status(400).send()
+    }
+
+    try {
+        const poll = await Poll.findOneAndRemove({ _id: id, author: user._id });
+        if (!poll) throw "No Poll Found";
+        res.send(poll);
+    } catch (e) {
+        res.status(400).send();
+    }
+});
+
 
 
 app.post('/user', async (req, res) => {

@@ -254,6 +254,53 @@ describe('SERVER', function () {
         });
     });
 
+    describe('DELETE /poll/:id', () => {
+        it('should delete a poll', done => {
+            const token = users[1].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .delete(`/poll/${id}`)
+                .set('x-auth', token)
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.question).to.equal(polls[1].question);
+                })
+                .end((err, res) => {
+                    if (err) return done(err);
+
+                    Poll.find()
+                        .then(polls => {
+                            expect(polls.length).to.equal(1);
+                            done();
+                        })
+                        .catch(e => done(e));
+                });
+        });
+
+        it('should not delete a poll of invalid user', done => {
+            const token = users[0].tokens[0].token;
+            const id = polls[1]._id.toHexString();
+
+            request(app)
+                .delete(`/poll/${id}`)
+                .set('x-auth', token)
+                .expect(400)
+                .end(done);
+        });
+
+        it('should not delete a poll of invalid poll id', done => {
+            const token = users[0].tokens[0].token;
+            const id = mongoose.Types.ObjectId().toHexString();
+
+            request(app)
+                .delete(`/poll/${id}`)
+                .set('x-auth', token)
+                .expect(400)
+                .end(done);
+        });
+    });
+
     describe('POST /user', () => {
         it('should create a new user', done => {
             const user = {
