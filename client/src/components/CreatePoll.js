@@ -34,10 +34,68 @@ export class CreatePoll extends React.Component {
         });
     };
 
+    addOptions = (e) => {
+        e.preventDefault();
+        this.setState(prevState => {
+            return {
+                options: [...prevState.options, { value: "" }]
+            };
+        });
+    };
+
+    submitHandler = async e => {
+        e.preventDefault();
+
+
+        if (this.validation()) return;
+
+        const poll = {
+            question: this.state.question,
+            options: this.trimOption()
+        };
+
+        try {
+            await this.props.createPoll(poll, this.props.token);
+            this.props.history.push('/');
+        } catch (e) {
+        }        
+
+    };
+
+    trimOption = () => {
+        const options = [...this.state.options];
+        let trimOptions = [];
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value.trim().length > 0) {
+                trimOptions.push(options[i]);
+            }
+        }
+
+        return trimOptions;
+    }
+
+    validation = () => {
+        let error = false;
+        const options = [...this.state.options];
+
+        if (this.state.question.trim().length < 1) {
+            error = true;
+        }
+
+        for (let i = 0; i < 2; i++) {
+            if (options[i].value.trim().length < 1) {
+                error = true;
+            }
+        }
+
+        return error;
+    };
+
     render() {
         let createPoll = (
             <div>
-                <form>
+                <form onSubmit={this.submitHandler}>
                     <div>
                         <input 
                             type="text"
@@ -60,14 +118,22 @@ export class CreatePoll extends React.Component {
                                 )
                             })
                         }
-                        <button>Add Option</button>
+                        <button className="addOption__btn" onClick={this.addOptions}>Add Option</button>
                     </div>
                     <div>
-                        <button>Create Poll</button>
+                        <input 
+                            className="submit__btn"
+                            type="submit"
+                            value="Create Poll"
+                        />
                     </div>
                 </form>
             </div>
         );
+
+        if (this.props.loading) {
+            createPoll = <h2 style={{ textAlign: "center"}}>Loading...</h2>;
+        }
         return createPoll;
     }
 }
@@ -81,7 +147,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createPoll: (poll, token) => pollActions.createPoll(poll, token)
+        createPoll: (poll, token) => dispatch(pollActions.createPoll(poll, token))
     };
 };
 

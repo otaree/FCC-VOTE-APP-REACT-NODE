@@ -17,7 +17,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form>
+      "children": <form
+        onSubmit={[Function]}
+>
         <div>
                 <input
                         onChange={[Function]}
@@ -39,14 +41,19 @@ ShallowWrapper {
                         type="text"
                         value=""
                 />
-                <button>
+                <button
+                        className="addOption__btn"
+                        onClick={[Function]}
+                >
                         Add Option
                 </button>
         </div>
         <div>
-                <button>
-                        Create Poll
-                </button>
+                <input
+                        className="submit__btn"
+                        type="submit"
+                        value="Create Poll"
+                />
         </div>
 </form>,
     },
@@ -78,16 +85,22 @@ ShallowWrapper {
                         type="text"
                         value=""
             />
-            <button>
+            <button
+                        className="addOption__btn"
+                        onClick={[Function]}
+            >
                         Add Option
             </button>
 </div>,
           <div>
-            <button>
-                        Create Poll
-            </button>
+            <input
+                        className="submit__btn"
+                        type="submit"
+                        value="Create Poll"
+            />
 </div>,
         ],
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -140,7 +153,10 @@ ShallowWrapper {
                   value=""
 />,
               ],
-              <button>
+              <button
+                className="addOption__btn"
+                onClick={[Function]}
+>
                 Add Option
 </button>,
             ],
@@ -181,6 +197,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Add Option",
+                "className": "addOption__btn",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "Add Option",
@@ -194,9 +212,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <button>
-              Create Poll
-</button>,
+            "children": <input
+              className="submit__btn"
+              type="submit"
+              value="Create Poll"
+/>,
           },
           "ref": null,
           "rendered": Object {
@@ -204,11 +224,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Create Poll",
+              "className": "submit__btn",
+              "type": "submit",
+              "value": "Create Poll",
             },
             "ref": null,
-            "rendered": "Create Poll",
-            "type": "button",
+            "rendered": null,
+            "type": "input",
           },
           "type": "div",
         },
@@ -223,7 +245,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <form>
+        "children": <form
+          onSubmit={[Function]}
+>
           <div>
                     <input
                               onChange={[Function]}
@@ -245,14 +269,19 @@ ShallowWrapper {
                               type="text"
                               value=""
                     />
-                    <button>
+                    <button
+                              className="addOption__btn"
+                              onClick={[Function]}
+                    >
                               Add Option
                     </button>
           </div>
           <div>
-                    <button>
-                              Create Poll
-                    </button>
+                    <input
+                              className="submit__btn"
+                              type="submit"
+                              value="Create Poll"
+                    />
           </div>
 </form>,
       },
@@ -284,16 +313,22 @@ ShallowWrapper {
                             type="text"
                             value=""
               />
-              <button>
+              <button
+                            className="addOption__btn"
+                            onClick={[Function]}
+              >
                             Add Option
               </button>
 </div>,
             <div>
-              <button>
-                            Create Poll
-              </button>
+              <input
+                            className="submit__btn"
+                            type="submit"
+                            value="Create Poll"
+              />
 </div>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -346,7 +381,10 @@ ShallowWrapper {
                     value=""
 />,
                 ],
-                <button>
+                <button
+                  className="addOption__btn"
+                  onClick={[Function]}
+>
                   Add Option
 </button>,
               ],
@@ -387,6 +425,8 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Add Option",
+                  "className": "addOption__btn",
+                  "onClick": [Function],
                 },
                 "ref": null,
                 "rendered": "Add Option",
@@ -400,9 +440,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <button>
-                Create Poll
-</button>,
+              "children": <input
+                className="submit__btn"
+                type="submit"
+                value="Create Poll"
+/>,
             },
             "ref": null,
             "rendered": Object {
@@ -410,11 +452,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Create Poll",
+                "className": "submit__btn",
+                "type": "submit",
+                "value": "Create Poll",
               },
               "ref": null,
-              "rendered": "Create Poll",
-              "type": "button",
+              "rendered": null,
+              "type": "input",
             },
             "type": "div",
           },
