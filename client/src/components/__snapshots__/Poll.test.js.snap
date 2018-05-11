@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poll renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Poll
+    poll={
+        Object {
+            "_id": "1",
+            "author": "123abc",
+            "createdAt": 1000,
+            "options": Array [
+              Object {
+                "_id": "101",
+                "value": "Yes",
+                "votes": 1,
+              },
+              Object {
+                "_id": "102",
+                "value": "No",
+                "votes": 0,
+              },
+            ],
+            "question": "Yes or No?",
+            "voters": Array [
+              "123abc",
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Yes or No?
+</h2>,
+        <p>
+          by 
+          123abc
+</p>,
+        <ul>
+          <li>
+                    Yes
+                    :
+                    1
+          </li>
+          <li>
+                    No
+                    :
+                    0
+          </li>
+</ul>,
+        undefined,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Yes or No?",
+        },
+        "ref": null,
+        "rendered": "Yes or No?",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "by ",
+            "123abc",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "by ",
+          "123abc",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              Yes
+              :
+              1
+</li>,
+            <li>
+              No
+              :
+              0
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "101",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Yes",
+                ":",
+                1,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Yes",
+              ":",
+              1,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "102",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "No",
+                ":",
+                0,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "No",
+              ":",
+              0,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      undefined,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Yes or No?
+</h2>,
+          <p>
+            by 
+            123abc
+</p>,
+          <ul>
+            <li>
+                        Yes
+                        :
+                        1
+            </li>
+            <li>
+                        No
+                        :
+                        0
+            </li>
+</ul>,
+          undefined,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Yes or No?",
+          },
+          "ref": null,
+          "rendered": "Yes or No?",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "by ",
+              "123abc",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "by ",
+            "123abc",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Yes
+                :
+                1
+</li>,
+              <li>
+                No
+                :
+                0
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "101",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Yes",
+                  ":",
+                  1,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Yes",
+                ":",
+                1,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "102",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "No",
+                  ":",
+                  0,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "No",
+                ":",
+                0,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        undefined,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

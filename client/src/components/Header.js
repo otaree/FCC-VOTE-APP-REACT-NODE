@@ -16,6 +16,7 @@ const Header = (props) => {
         navlinks = (
             <ul>
                 <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
+                <li><NavLink to="/poll/create" exact activeClassName="active">Create Poll</NavLink></li>
                 <li><NavLink to="/password/change" activeClassName="active">Change Password</NavLink></li>                
                 <li><NavLink to="/logout" activeClassName="active">Logout</NavLink></li>
             </ul>

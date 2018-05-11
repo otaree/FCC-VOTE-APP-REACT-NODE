@@ -19,9 +19,13 @@ ShallowWrapper {
     "props": Object {
       "children": <Switch>
         <Route
+                component={[Function]}
                 exact={true}
                 path="/"
-                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                path="/poll/:id"
         />
         <Route
                 component={[Function]}
@@ -41,9 +45,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
+            component={[Function]}
             exact={true}
             path="/"
-            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            path="/poll/:id"
 />,
           <Route
             component={[Function]}
@@ -62,9 +70,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
             "path": "/",
-            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/poll/:id",
           },
           "ref": null,
           "rendered": null,
@@ -107,9 +127,13 @@ ShallowWrapper {
       "props": Object {
         "children": <Switch>
           <Route
+                    component={[Function]}
                     exact={true}
                     path="/"
-                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    path="/poll/:id"
           />
           <Route
                     component={[Function]}
@@ -129,9 +153,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
+              component={[Function]}
               exact={true}
               path="/"
-              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              path="/poll/:id"
 />,
             <Route
               component={[Function]}
@@ -150,9 +178,21 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "component": [Function],
               "exact": true,
               "path": "/",
-              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/poll/:id",
             },
             "ref": null,
             "rendered": null,

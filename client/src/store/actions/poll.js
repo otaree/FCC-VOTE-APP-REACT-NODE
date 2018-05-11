@@ -52,10 +52,10 @@ export const fetchPolls = () => {
         try {
             const response = await axios.get('http://localhost:5000/polls');
             dispatch(setPolls(response.data));
-            return Promise.resolve();
+            return Promise.resolve("PASS");
         } catch (e) {
             dispatch(pollFail("Network Problem"));
-            return Promise.reject();
+            return Promise.reject("FAIL");
         }
     }
 };
