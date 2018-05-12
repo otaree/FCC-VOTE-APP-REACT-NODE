@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
 import * as pollActions from '../store/actions/poll';
@@ -14,7 +15,7 @@ export class Poll extends React.Component {
         let editButton;
         if (this.props.poll) {
             if (this.props.userId) {
-                editButton = this.props.userId === this.props.poll.author ? (<button>Edit</button>) : null;
+                editButton = this.props.userId === this.props.poll.author ? (<Link to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
             }
             poll = (
                 <div>
