@@ -105,7 +105,6 @@ export class EditPoll extends React.Component {
         if (this.validation()) return;
 
         const newOptions = this.extractNewOptions();
-        console.log("NEW OPTIONS", newOptions);
         const add = newOptions.length < 1 ? null : newOptions.map(option => {
             return {
                 value: option.value
@@ -174,7 +173,7 @@ export class EditPoll extends React.Component {
                                                 value={option.value}
                                                 onChange={e => this.optionsChangeHandler(e, index)}
                                             />
-                                            <span onClick={e => this.removeOptionsHandler(e, index)}>X</span>
+                                            <span className="remove__option" onClick={e => this.removeOptionsHandler(e, index)}>X</span>
                                         </div>
                                     )
                                 })
