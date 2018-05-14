@@ -36,5 +36,11 @@ const renderApp = () => {
 
 ReactDOM.render(<h2 style={{ textAlign: "center"}}>Loading...</h2>, document.getElementById('root'));
 
-store.dispatch(authActions.getUid());
-renderApp();
+store
+    .dispatch(authActions.initAuth())
+    .then(() => {
+        renderApp();        
+    })
+    .catch(e => {
+        console.log(e);
+    });

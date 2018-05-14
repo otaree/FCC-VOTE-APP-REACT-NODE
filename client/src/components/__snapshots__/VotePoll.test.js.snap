@@ -1,0 +1,483 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VotePoll renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <VotePoll
+    onVote={[Function]}
+    poll={
+        Object {
+            "_id": "1",
+            "author": "123abc",
+            "createdAt": 1000,
+            "options": Array [
+              Object {
+                "_id": "101",
+                "value": "Yes",
+                "votes": 1,
+              },
+              Object {
+                "_id": "102",
+                "value": "No",
+                "votes": 0,
+              },
+            ],
+            "question": "Yes or No?",
+            "voters": Array [
+              "123abc",
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Yes or No?
+</h2>,
+        <form
+          onSubmit={[Function]}
+>
+          <div>
+                    <input
+                              name="vote"
+                              onChange={[Function]}
+                              type="radio"
+                              value="101"
+                    />
+                    Yes
+                    <br />
+          </div>
+          <div>
+                    <input
+                              name="vote"
+                              onChange={[Function]}
+                              type="radio"
+                              value="102"
+                    />
+                    No
+                    <br />
+          </div>
+          <div>
+                    <input
+                              type="submit"
+                              value="Vote"
+                    />
+          </div>
+</form>,
+        undefined,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Yes or No?",
+        },
+        "ref": null,
+        "rendered": "Yes or No?",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            Array [
+              <div>
+                <input
+                                name="vote"
+                                onChange={[Function]}
+                                type="radio"
+                                value="101"
+                />
+                Yes
+                <br />
+</div>,
+              <div>
+                <input
+                                name="vote"
+                                onChange={[Function]}
+                                type="radio"
+                                value="102"
+                />
+                No
+                <br />
+</div>,
+            ],
+            <div>
+              <input
+                            type="submit"
+                            value="Vote"
+              />
+</div>,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "101",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  name="vote"
+                  onChange={[Function]}
+                  type="radio"
+                  value="101"
+/>,
+                "Yes",
+                <br />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "vote",
+                  "onChange": [Function],
+                  "type": "radio",
+                  "value": "101",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              "Yes",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "102",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  name="vote"
+                  onChange={[Function]}
+                  type="radio"
+                  value="102"
+/>,
+                "No",
+                <br />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "vote",
+                  "onChange": [Function],
+                  "type": "radio",
+                  "value": "102",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              "No",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <input
+                type="submit"
+                value="Vote"
+/>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "type": "submit",
+                "value": "Vote",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "form",
+      },
+      undefined,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Yes or No?
+</h2>,
+          <form
+            onSubmit={[Function]}
+>
+            <div>
+                        <input
+                                    name="vote"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="101"
+                        />
+                        Yes
+                        <br />
+            </div>
+            <div>
+                        <input
+                                    name="vote"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="102"
+                        />
+                        No
+                        <br />
+            </div>
+            <div>
+                        <input
+                                    type="submit"
+                                    value="Vote"
+                        />
+            </div>
+</form>,
+          undefined,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Yes or No?",
+          },
+          "ref": null,
+          "rendered": "Yes or No?",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                <div>
+                  <input
+                                    name="vote"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="101"
+                  />
+                  Yes
+                  <br />
+</div>,
+                <div>
+                  <input
+                                    name="vote"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="102"
+                  />
+                  No
+                  <br />
+</div>,
+              ],
+              <div>
+                <input
+                                type="submit"
+                                value="Vote"
+                />
+</div>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "101",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    name="vote"
+                    onChange={[Function]}
+                    type="radio"
+                    value="101"
+/>,
+                  "Yes",
+                  <br />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "vote",
+                    "onChange": [Function],
+                    "type": "radio",
+                    "value": "101",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                "Yes",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "102",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    name="vote"
+                    onChange={[Function]}
+                    type="radio"
+                    value="102"
+/>,
+                  "No",
+                  <br />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "vote",
+                    "onChange": [Function],
+                    "type": "radio",
+                    "value": "102",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                "No",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <input
+                  type="submit"
+                  value="Vote"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "type": "submit",
+                  "value": "Vote",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "form",
+        },
+        undefined,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
