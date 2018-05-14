@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+const uniqid = require('uniqid');
 
 const { User } = require('../../models/User');
 const { Poll } = require('../../models/Poll');
@@ -46,6 +47,9 @@ const populateUsers = done => {
         .then(() => done());
 };
 
+const userOneUid = uniqid();
+const userTwoUid = uniqid();
+
 const polls = [{
     _id: mongoose.Types.ObjectId(),
     question: "who won the race?",
@@ -62,7 +66,7 @@ const polls = [{
     _id: mongoose.Types.ObjectId(),
     question:"why did the chicken cross the road?",
     author: userTwoId,
-    voters: [{ voter: userTwoId }],
+    voters: [userTwoUid],
     options: [
         {
             votes: 1,
@@ -85,4 +89,4 @@ const populatePolls = done => {
         .then(() => done());
 };
 
-module.exports = { users, populateUsers, polls, populatePolls, userOneId, userTwoId };
+module.exports = { users, populateUsers, polls, populatePolls, userOneId, userTwoId, userOneUid, userTwoUid };

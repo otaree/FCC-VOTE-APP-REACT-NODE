@@ -2,11 +2,12 @@ const request = require('supertest');
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+const uniqid = require('uniqid');
 
 const { app } = require('../server');
 const { User } = require('../models/User');
 const { Poll } = require('../models/Poll');
-const { users, populateUsers, polls, populatePolls, userOneId, userTwoId } = require('./seed/seed');
+const { users, populateUsers, polls, populatePolls, userOneId, userTwoId, userOneUid, userTwoUid } = require('./seed/seed');
 
 describe('SERVER', function () {
     this.timeout(15000);
@@ -110,13 +111,13 @@ describe('SERVER', function () {
 
     describe('PATCH /poll/:id/vote', () => {
         it('should be able to cast vote for first time voter', done => {
-            const userId = userOneId.toHexString();
+            const uid = userOneUid;
             const option = polls[1].options[0]._id.toHexString();
             const id = polls[1]._id.toHexString();
 
             request(app)
                 .patch(`/poll/${id}/vote`)
-                .send({ userId, option })
+                .send({ uid, option })
                 .expect(200)
                 .expect(res => {
                     expect(res.body.options[0].votes).to.equal(2);
@@ -133,13 +134,13 @@ describe('SERVER', function () {
         });
 
         it('should not be able to cast vote for user who already casted vote a poll', done => {
-            const userId = userTwoId.toHexString();
+            const uid = userTwoUid;
             const option = polls[1].options[0]._id.toHexString();
             const id = polls[1]._id.toHexString();
 
             request(app)
                 .patch(`/poll/${id}/vote`)
-                .send({ userId, option })
+                .send({ uid, option })
                 .expect(400)
                 .end((err, res) => {
                     if (err) return done(err);
@@ -153,13 +154,13 @@ describe('SERVER', function () {
         });
 
         it('should not be able to cast vote for invalid option id', done => {
-            const userId = userOneId.toHexString();
+            const uid = uniqid();
             const option = mongoose.Types.ObjectId().toHexString()
             const id = polls[1]._id.toHexString();
 
             request(app)
                 .patch(`/poll/${id}/vote`)
-                .send({ userId, option })
+                .send({ uid, option })
                 .expect(400)
                 .end(done);
         });

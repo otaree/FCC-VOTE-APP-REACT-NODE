@@ -70,16 +70,16 @@ app.get('/poll/:id',  async (req, res) => {
 app.patch('/poll/:id/vote', async (req, res) => {
     const id = req.params.id;
     const optionId = req.body.option;
-    const userId = req.body.userId;
+    const uId = req.body.uid; 
 
-    if (!ObjectId.isValid(id) || !ObjectId.isValid(optionId) || !ObjectId.isValid(userId)) {
+    if (!ObjectId.isValid(id) || !ObjectId.isValid(optionId) || !uId) {
         return res.status(400).send();
     }
 
     try {
-        const poll = await Poll.findOne({ _id: id, "voters.voter": userId });
+        const poll = await Poll.findOne({ _id: id, "voters": uId });
         if (poll) throw "User already Voted";
-        const updatedPoll = await Poll.findOneAndUpdate({ _id: id, "options._id": optionId }, { $inc: { 'options.$.votes': 1 }, $push: { voters: { voter: userId } } }, { new: true });
+        const updatedPoll = await Poll.findOneAndUpdate({ _id: id, "options._id": optionId }, { $inc: { 'options.$.votes': 1 }, $push: { voters: uId } }, { new: true });
         if (!updatedPoll) throw "Invalid Id";
         res.send(updatedPoll);
     } catch (e) {
