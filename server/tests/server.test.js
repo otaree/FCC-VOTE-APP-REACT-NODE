@@ -80,7 +80,7 @@ describe('SERVER', function () {
                 .expect(200)
                 .expect(res => {
                     expect(res.body.length).to.equal(2);
-                    expect(res.body[0].options[0].votes).to.equal(0);
+                    expect(res.body[0].author._id).to.equal(userOneId.toHexString());
                 })
                 .end(done);
         });

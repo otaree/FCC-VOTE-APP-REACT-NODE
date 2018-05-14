@@ -152,22 +152,24 @@ export class EditPoll extends React.Component {
         let updatePoll = <h2 style={{ textAlign: "center" }}>Loading...</h2>;
         if (this.state.poll && !this.props.loading) {
             updatePoll = (
-                <div>
-                    <form onSubmit={this.submitHandler}>
-                        <div>
+                <div className="Poll_form_container"> 
+                    <form className="Poll__form" onSubmit={this.submitHandler}>
+                        <div className="Poll__form__control">
                             <input 
+                                className="Poll__form_question"
                                 type="text"
                                 placeholder="Question"
                                 value={this.state.poll.question}
                                 onChange={this.questionChangeHandler}
                             />
                         </div>
-                        <div>
+                        <div className="Poll__form__control">
                             {
                                 this.state.poll.options.map((option, index) => {
                                     return (
                                         <div key={index}>
                                             <input
+                                                className="Poll__form_option"
                                                 type="text" 
                                                 placeholder={`Option ${index + 1}`}
                                                 value={option.value}
@@ -178,15 +180,17 @@ export class EditPoll extends React.Component {
                                     )
                                 })
                             }
-                            <button className="addOption__btn" onClick={this.addOptions}>Add Option</button>
+                             <div className="add__container"> 
+                                <button className="addOption__btn" onClick={this.addOptions}>Add Option</button>
+                            </div>
                         </div>
-                        <div>
+                        <div className="Poll_submit_container">
                             <input 
                                 className="submit__btn"
                                 type="submit"
                                 value="Update Poll"
                             />
-                            <button onClick={this.deletePoll}>Delete Poll</button>
+                            <button className="Poll_delete__btn" onClick={this.deletePoll}>Delete Poll</button>
                         </div>
                     </form>
                 </div>

@@ -1,0 +1,24 @@
+.polls_list {
+    list-style: none;
+}
+
+.polls_list_item {
+    border: thin solid #aaa;
+    margin: 1% 0;
+    padding: 1%;
+    border-radius: 3px;
+}
+
+.polls_list_item:hover {
+    background-color: #999;
+    color: #eee;
+}
+
+.polls_list_item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.polls_list_item a:hover {
+    color: #eee;
+}

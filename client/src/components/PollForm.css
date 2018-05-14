@@ -1,0 +1,85 @@
+.Poll_form_container {
+    width: 50%;
+    margin: 2% auto;
+}
+
+.Poll__form_question {
+    outline: none;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 2%;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+
+.Poll__form_question:focus {
+    border: 2px solid rgb(153, 182, 219);
+    border-radius: 5px;
+}
+
+.Poll__form_option {
+    outline: none;
+    width: 60%;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border: thin solid #888;
+    border-radius: 3px;
+    margin-top: 0.2px;
+}
+
+.Poll__form_option:focus {
+    border: 2px solid rgb(153, 182, 219);
+    border-radius: 5px;
+}
+
+.add__container {
+    width: 50%;
+    margin: 2px auto;    
+}
+
+.addOption__btn {
+    outline: none;
+    border: thin solid #777;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(198, 201, 47);
+    color: #eee;
+    cursor: pointer;
+}
+
+.Poll_submit_container {
+    width: 50%;
+    margin: 3% auto;
+}
+
+.Poll_submit_container .submit__btn {
+    outline: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: thin solid #888;
+    border-radius: 5px;
+    background-color: rgb(36, 161, 88);
+    color: #eee;
+    cursor: pointer;
+}
+
+.Poll_delete__btn {
+    margin-left: 1%;
+    outline: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: thin solid #888;
+    border-radius: 5px;
+    background-color: rgb(192, 66, 66);
+    color: #eee;
+    cursor: pointer;
+}

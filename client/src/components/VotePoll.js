@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './VotePoll.css';
+
 export default class VotePoll extends React.Component {
     state = {
         selected: null
@@ -16,8 +18,7 @@ export default class VotePoll extends React.Component {
     };
     render() {
         return (
-            <div>
-                <h2>{this.props.poll.question}</h2>
+            <div className="VotePoll">
                 <form onSubmit={this.handleSubmit}>
                     {
                         this.props.poll.options.map(option => {
@@ -35,14 +36,14 @@ export default class VotePoll extends React.Component {
                             );
                         })
                     }
-                    <div>
+                    <div className="vote_Button">
                         <input 
+                            className="vote__btn"
                             type="submit"
                             value="Vote"
                         />
                     </div>
                 </form>
-                {this.props.children}
             </div>
         );
     }

@@ -6,6 +6,7 @@ import { isEmpty } from 'lodash';
 import PollStats from './PollStats';
 import VotePoll from './VotePoll';
 import * as pollActions from '../store/actions/poll';
+import "./Poll.css";
 
 export class Poll extends React.Component {
     async componentDidMount() {
@@ -27,14 +28,35 @@ export class Poll extends React.Component {
         let poll = <h2 style={{ textAlign: "center"}}>Loading...</h2>;
         let editButton;
         if (this.props.poll) {
-            console.log(this.props.isAuth);
             if (this.props.userId) {
-                editButton = this.props.userId === this.props.poll.author ? (<Link to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
+                editButton = this.props.userId === this.props.poll.author._id ? (<Link to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
             }
             if (this.props.poll.voters.indexOf(this.props.uid) === -1) {
-                poll = <VotePoll poll={this.props.poll} onVote={this.voteHandler}>{editButton}</VotePoll>;                
+                poll = (
+                    <div className="Poll_body">
+                        <div className="Poll_header">
+                            <h2>{this.props.poll.question}</h2>
+                            <p>by {this.props.poll.author.name}</p>
+                            <div className="Poll_control">
+                                { editButton }
+                            </div>
+                        </div>
+                        <VotePoll poll={this.props.poll} onVote={this.voteHandler} />
+                    </div>
+                );                
             } else {
-                poll = <PollStats poll={this.props.poll}>{editButton}</PollStats>;
+                poll = (
+                    <div className="Poll_body">
+                        <div className="Poll_header">
+                            <h2>{this.props.poll.question}</h2>
+                            <p>by {this.props.poll.author.name}</p>
+                            <div className="Poll_control">
+                                { editButton }
+                            </div>
+                        </div>
+                        <PollStats poll={this.props.poll} />
+                    </div>
+                );
             }
         }
         return poll;

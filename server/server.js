@@ -41,7 +41,7 @@ app.post('/poll', authenticate, async (req, res) => {
 
 app.get('/polls', async (req, res) => {
     try {
-        const polls = await Poll.find({});
+        const polls = await Poll.find({}).select("question author _id").populate('author');
         res.send(polls);
     } catch (e) {
         res.status(400).send();
@@ -56,7 +56,7 @@ app.get('/poll/:id',  async (req, res) => {
     }
 
     try {
-         const poll = await Poll.findById(id);
+         const poll = await Poll.findById(id).populate("author");
          if (!poll) {
              throw "No Poll"
          }
@@ -79,7 +79,7 @@ app.patch('/poll/:id/vote', async (req, res) => {
     try {
         const poll = await Poll.findOne({ _id: id, "voters": uId });
         if (poll) throw "User already Voted";
-        const updatedPoll = await Poll.findOneAndUpdate({ _id: id, "options._id": optionId }, { $inc: { 'options.$.votes': 1 }, $push: { voters: uId } }, { new: true });
+        const updatedPoll = await Poll.findOneAndUpdate({ _id: id, "options._id": optionId }, { $inc: { 'options.$.votes': 1 }, $push: { voters: uId } }, { new: true }).populate("author");
         if (!updatedPoll) throw "Invalid Id";
         res.send(updatedPoll);
     } catch (e) {

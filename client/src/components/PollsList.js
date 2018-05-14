@@ -5,9 +5,9 @@ import './PollsList.css';
 
 const PollsList = props => {
     return (
-            <ul>
+            <ul className="polls_list">
                 {
-                    props.polls.map(poll => <li key={poll._id}><Link to={`poll/${poll._id}`}>{poll.question}</Link></li>)
+                    props.polls.map(poll => <li className="polls_list_item" key={poll._id}><Link to={`poll/${poll._id}`}>{poll.question}</Link></li>)
                 }
             </ul>
     );
