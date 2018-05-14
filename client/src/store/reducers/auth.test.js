@@ -1,12 +1,14 @@
 import * as constants from '../actions/constants';
 import authReducer from './auth';
 
+const uid = '123abc!';
 describe('authReducer', () => {
     let initialState = {
         token: null,
         userId: null,
         name: null,
         email: null,
+        uid: null,
         error: {
             isError: false,
             value: ''
@@ -76,10 +78,21 @@ describe('authReducer', () => {
             token: '123abc',
             name: "Test",
             email: "test@test.com",
-            userId: "1"
+            userId: "1",
+            uid
         }, {
             type: constants.AUTH_LOGOUT
-        })).toEqual(initialState);
+        })).toEqual({...initialState, uid });
+    });
+
+    it('should set uid', () => {
+        expect(authReducer(initialState, {
+            type: constants.AUTH_GET_UID,
+            uid
+        })).toEqual({
+            ...initialState,
+            uid
+        });
     });
 });
 

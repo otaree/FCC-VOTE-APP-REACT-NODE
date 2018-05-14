@@ -10,6 +10,7 @@ let createMockStore, mock, store, initialState;
 describe('Auth Actions', () => {
     initialState = {
         token: null,
+        uid: null,
         userId: null,
         name: null,
         error: {
@@ -70,6 +71,12 @@ describe('Auth Actions', () => {
             }
         });
     });
+
+    // it('should denerate auth uid action', () => {
+    //     const action = actions.getUid();
+    //     expect(action.type).toEqual(constants.AUTH_GET_UID);
+    //     expect(action.uid).toBeTruthy();
+    // });
 
     describe('ASYNC ACTIONS', () => {
         beforeEach(() => {

@@ -120,12 +120,12 @@ export const deletePoll = (token, id) => {
     }
 };
 
-export const votePoll = (id, optionId, userId) => {
+export const votePoll = (id, optionId, uid) => {
     return async dispatch => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios({ url: `http://localhost:5000/poll/${id}/vote`, method: "patch", data: { option: optionId, userId } });
+            const response = await axios({ url: `http://localhost:5000/poll/${id}/vote`, method: "patch", data: { option: optionId, uid } });
             dispatch(pollSuccess());
             return response.data;
         } catch (e) {

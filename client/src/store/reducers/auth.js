@@ -5,6 +5,7 @@ const initialState = {
     userId: null,
     name: null,
     email: null,
+    uid: null,
     error: {
         isError: false,
         value: ''
@@ -19,6 +20,11 @@ export default (state=initialState, action) => {
                 ...state,
                 loading: action.loading
             }
+        case constants.AUTH_GET_UID:
+            return {
+                ...state,
+                uid: action.uid
+            };
         case constants.AUTH_LOGIN:
             return {
                 ...state,
@@ -37,6 +43,7 @@ export default (state=initialState, action) => {
             };
         case constants.AUTH_LOGOUT:
             return {
+                ...state,
                 token: null,
                 userId: null,
                 name: null,

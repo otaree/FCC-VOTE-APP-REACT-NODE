@@ -1,4 +1,5 @@
 import axios from 'axios';
+import uniqid from 'uniqid';
 
 import * as constants from './constants';
 
@@ -53,4 +54,16 @@ export const initUser = (token) => {
             dispatch(fail("Authentication fail"));
         }
     };
+};
+
+export const getUid = () => {
+    let uid = localStorage.getItem("uid");
+    if (!uid) {
+        uid = uniqid();
+        localStorage.setItem("uid", uid)
+    }
+    return {
+        type: constants.AUTH_GET_UID,
+        uid
+    }
 };
