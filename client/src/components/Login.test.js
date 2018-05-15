@@ -58,7 +58,7 @@ describe('SignUp', () => {
         });
 
         it('should render the error message', () => {
-            expect(login.find('.auth-server-fail').length).toEqual(1);
+            expect(login.find('.auth-error').length).toEqual(1);
         });
     });
 });

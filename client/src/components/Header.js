@@ -1,32 +1,39 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './Header.css';
+// import './Header.css';
 
 const Header = (props) => {
     let navlinks = (
-        <ul>
-            <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
-            <li><NavLink to="/login" activeClassName="active">Login</NavLink></li>
-            <li><NavLink to="/signup" activeClassName="active">Sign up</NavLink></li>
-        </ul>
+        <div className="navbar-end">
+            <NavLink className="navbar-item" to="/" exact activeClassName="active">Home</NavLink>
+            <NavLink className="navbar-item" to="/login" activeClassName="active">Login</NavLink>
+            <NavLink className="navbar-item" to="/signup" activeClassName="active">Sign up</NavLink>
+        </div>
     );
 
     if (props.isAuth) {
         navlinks = (
-            <ul>
-                <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
-                <li><NavLink to="/poll/create" exact activeClassName="active">Create Poll</NavLink></li>
-                <li><NavLink to="/password/change" activeClassName="active">Change Password</NavLink></li>                
-                <li><NavLink to="/logout" activeClassName="active">Logout</NavLink></li>
-            </ul>
+            <div className="navbar-end">
+                <NavLink className="navbar-item" to="/" exact activeClassName="active">Home</NavLink>
+                <NavLink className="navbar-item" to="/poll/create" exact activeClassName="active">Create Poll</NavLink>
+                <NavLink className="navbar-item" to="/password/change" activeClassName="active">Change Password</NavLink>                
+                <NavLink className="navbar-item" to="/logout" activeClassName="active">Logout</NavLink>
+            </div>
         );
     }
 
     return (
         <header>
-            <nav>
-                {navlinks}
+            <nav className="navbar is-info">
+                <div className="navbar-brand">
+                    <a className="navbar-item">
+                        <h2 className="is-size-3">POLL</h2>
+                    </a>
+                </div>
+                <div className="navbar-menu is-active">                    
+                    {navlinks}
+                </div>
             </nav>
         </header>
     );

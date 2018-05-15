@@ -17,37 +17,55 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <nav>
-        <ul>
-                <li>
+      "children": <nav
+        className="navbar is-info"
+>
+        <div
+                className="navbar-brand"
+        >
+                <a
+                        className="navbar-item"
+                >
+                        <h2
+                                className="is-size-3"
+                        >
+                                POLL
+                        </h2>
+                </a>
+        </div>
+        <div
+                className="navbar-menu is-active"
+        >
+                <div
+                        className="navbar-end"
+                >
                         <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 exact={true}
                                 to="/"
                         >
                                 Home
                         </NavLink>
-                </li>
-                <li>
                         <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 to="/login"
                         >
                                 Login
                         </NavLink>
-                </li>
-                <li>
                         <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 to="/signup"
                         >
                                 Sign up
                         </NavLink>
-                </li>
-        </ul>
+                </div>
+        </div>
 </nav>,
     },
     "ref": null,
@@ -56,171 +74,229 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <ul>
-          <li>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              exact={true}
-                              to="/"
-                    >
-                              Home
-                    </NavLink>
-          </li>
-          <li>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              to="/login"
-                    >
-                              Login
-                    </NavLink>
-          </li>
-          <li>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              to="/signup"
-                    >
-                              Sign up
-                    </NavLink>
-          </li>
-</ul>,
+        "children": Array [
+          <div
+            className="navbar-brand"
+>
+            <a
+                        className="navbar-item"
+            >
+                        <h2
+                                    className="is-size-3"
+                        >
+                                    POLL
+                        </h2>
+            </a>
+</div>,
+          <div
+            className="navbar-menu is-active"
+>
+            <div
+                        className="navbar-end"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    exact={true}
+                                    to="/"
+                        >
+                                    Home
+                        </NavLink>
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    to="/login"
+                        >
+                                    Login
+                        </NavLink>
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    to="/signup"
+                        >
+                                    Sign up
+                        </NavLink>
+            </div>
+</div>,
+        ],
+        "className": "navbar is-info",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <li>
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              className="navbar-item"
+>
+              <h2
+                            className="is-size-3"
+              >
+                            POLL
+              </h2>
+</a>,
+            "className": "navbar-brand",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h2
+                className="is-size-3"
+>
+                POLL
+</h2>,
+              "className": "navbar-item",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "POLL",
+                "className": "is-size-3",
+              },
+              "ref": null,
+              "rendered": "POLL",
+              "type": "h2",
+            },
+            "type": "a",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="navbar-end"
+>
               <NavLink
                             activeClassName="active"
                             ariaCurrent="true"
+                            className="navbar-item"
                             exact={true}
                             to="/"
               >
                             Home
               </NavLink>
-</li>,
-            <li>
               <NavLink
                             activeClassName="active"
                             ariaCurrent="true"
+                            className="navbar-item"
                             to="/login"
               >
                             Login
               </NavLink>
-</li>,
-            <li>
               <NavLink
                             activeClassName="active"
                             ariaCurrent="true"
+                            className="navbar-item"
                             to="/signup"
               >
                             Sign up
               </NavLink>
-</li>,
-          ],
+</div>,
+            "className": "navbar-menu is-active",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <NavLink
+                  activeClassName="active"
+                  ariaCurrent="true"
+                  className="navbar-item"
+                  exact={true}
+                  to="/"
+>
+                  Home
+</NavLink>,
+                <NavLink
+                  activeClassName="active"
+                  ariaCurrent="true"
+                  className="navbar-item"
+                  to="/login"
+>
+                  Login
+</NavLink>,
+                <NavLink
+                  activeClassName="active"
+                  ariaCurrent="true"
+                  className="navbar-item"
+                  to="/signup"
+>
+                  Sign up
+</NavLink>,
+              ],
+              "className": "navbar-end",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "ariaCurrent": "true",
+                  "children": "Home",
+                  "className": "navbar-item",
+                  "exact": true,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": "Home",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "ariaCurrent": "true",
+                  "children": "Login",
+                  "className": "navbar-item",
+                  "to": "/login",
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "ariaCurrent": "true",
+                  "children": "Sign up",
+                  "className": "navbar-item",
+                  "to": "/signup",
+                },
+                "ref": null,
+                "rendered": "Sign up",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
         },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                exact={true}
-                to="/"
->
-                Home
-</NavLink>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "Home",
-                "exact": true,
-                "to": "/",
-              },
-              "ref": null,
-              "rendered": "Home",
-              "type": [Function],
-            },
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                to="/login"
->
-                Login
-</NavLink>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "Login",
-                "to": "/login",
-              },
-              "ref": null,
-              "rendered": "Login",
-              "type": [Function],
-            },
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                to="/signup"
->
-                Sign up
-</NavLink>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "Sign up",
-                "to": "/signup",
-              },
-              "ref": null,
-              "rendered": "Sign up",
-              "type": [Function],
-            },
-            "type": "li",
-          },
-        ],
-        "type": "ul",
-      },
+      ],
       "type": "nav",
     },
     "type": "header",
@@ -231,37 +307,55 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <nav>
-          <ul>
-                    <li>
+        "children": <nav
+          className="navbar is-info"
+>
+          <div
+                    className="navbar-brand"
+          >
+                    <a
+                              className="navbar-item"
+                    >
+                              <h2
+                                        className="is-size-3"
+                              >
+                                        POLL
+                              </h2>
+                    </a>
+          </div>
+          <div
+                    className="navbar-menu is-active"
+          >
+                    <div
+                              className="navbar-end"
+                    >
                               <NavLink
                                         activeClassName="active"
                                         ariaCurrent="true"
+                                        className="navbar-item"
                                         exact={true}
                                         to="/"
                               >
                                         Home
                               </NavLink>
-                    </li>
-                    <li>
                               <NavLink
                                         activeClassName="active"
                                         ariaCurrent="true"
+                                        className="navbar-item"
                                         to="/login"
                               >
                                         Login
                               </NavLink>
-                    </li>
-                    <li>
                               <NavLink
                                         activeClassName="active"
                                         ariaCurrent="true"
+                                        className="navbar-item"
                                         to="/signup"
                               >
                                         Sign up
                               </NavLink>
-                    </li>
-          </ul>
+                    </div>
+          </div>
 </nav>,
       },
       "ref": null,
@@ -270,171 +364,229 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <ul>
-            <li>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    exact={true}
-                                    to="/"
-                        >
-                                    Home
-                        </NavLink>
-            </li>
-            <li>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    to="/login"
-                        >
-                                    Login
-                        </NavLink>
-            </li>
-            <li>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    to="/signup"
-                        >
-                                    Sign up
-                        </NavLink>
-            </li>
-</ul>,
+          "children": Array [
+            <div
+              className="navbar-brand"
+>
+              <a
+                            className="navbar-item"
+              >
+                            <h2
+                                          className="is-size-3"
+                            >
+                                          POLL
+                            </h2>
+              </a>
+</div>,
+            <div
+              className="navbar-menu is-active"
+>
+              <div
+                            className="navbar-end"
+              >
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          className="navbar-item"
+                                          exact={true}
+                                          to="/"
+                            >
+                                          Home
+                            </NavLink>
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          className="navbar-item"
+                                          to="/login"
+                            >
+                                          Login
+                            </NavLink>
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          className="navbar-item"
+                                          to="/signup"
+                            >
+                                          Sign up
+                            </NavLink>
+              </div>
+</div>,
+          ],
+          "className": "navbar is-info",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <li>
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                className="navbar-item"
+>
+                <h2
+                                className="is-size-3"
+                >
+                                POLL
+                </h2>
+</a>,
+              "className": "navbar-brand",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h2
+                  className="is-size-3"
+>
+                  POLL
+</h2>,
+                "className": "navbar-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "POLL",
+                  "className": "is-size-3",
+                },
+                "ref": null,
+                "rendered": "POLL",
+                "type": "h2",
+              },
+              "type": "a",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="navbar-end"
+>
                 <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 exact={true}
                                 to="/"
                 >
                                 Home
                 </NavLink>
-</li>,
-              <li>
                 <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 to="/login"
                 >
                                 Login
                 </NavLink>
-</li>,
-              <li>
                 <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
+                                className="navbar-item"
                                 to="/signup"
                 >
                                 Sign up
                 </NavLink>
-</li>,
-            ],
+</div>,
+              "className": "navbar-menu is-active",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="navbar-item"
+                    exact={true}
+                    to="/"
+>
+                    Home
+</NavLink>,
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="navbar-item"
+                    to="/login"
+>
+                    Login
+</NavLink>,
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="navbar-item"
+                    to="/signup"
+>
+                    Sign up
+</NavLink>,
+                ],
+                "className": "navbar-end",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Home",
+                    "className": "navbar-item",
+                    "exact": true,
+                    "to": "/",
+                  },
+                  "ref": null,
+                  "rendered": "Home",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Login",
+                    "className": "navbar-item",
+                    "to": "/login",
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Sign up",
+                    "className": "navbar-item",
+                    "to": "/signup",
+                  },
+                  "ref": null,
+                  "rendered": "Sign up",
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  exact={true}
-                  to="/"
->
-                  Home
-</NavLink>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Home",
-                  "exact": true,
-                  "to": "/",
-                },
-                "ref": null,
-                "rendered": "Home",
-                "type": [Function],
-              },
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  to="/login"
->
-                  Login
-</NavLink>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Login",
-                  "to": "/login",
-                },
-                "ref": null,
-                "rendered": "Login",
-                "type": [Function],
-              },
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  to="/signup"
->
-                  Sign up
-</NavLink>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Sign up",
-                  "to": "/signup",
-                },
-                "ref": null,
-                "rendered": "Sign up",
-                "type": [Function],
-              },
-              "type": "li",
-            },
-          ],
-          "type": "ul",
-        },
+        ],
         "type": "nav",
       },
       "type": "header",

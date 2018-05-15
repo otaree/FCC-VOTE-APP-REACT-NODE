@@ -29,6 +29,7 @@ ShallowWrapper {
 >
         No Polls
 </div>,
+      "className": "section",
     },
     "ref": null,
     "rendered": Object {
@@ -62,6 +63,7 @@ ShallowWrapper {
 >
           No Polls
 </div>,
+        "className": "section",
       },
       "ref": null,
       "rendered": Object {

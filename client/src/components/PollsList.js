@@ -1,15 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './PollsList.css';
 
 const PollsList = props => {
     return (
-            <ul className="polls_list">
+        <div className="columns is-mobile">
+             <div  className="column is-three-fifths is-offset-one-fifth">
                 {
-                    props.polls.map(poll => <li className="polls_list_item" key={poll._id}><Link to={`poll/${poll._id}`}>{poll.question}</Link></li>)
+                    props.polls.map(poll => {
+                        return (
+                            <div key={poll._id} className="block">
+                                <Link to={`poll/${poll._id}`}>
+                                    <p className="title">{poll.question}</p>
+                                    <p className="subtitle is-right">{poll.author.name}</p>
+                                </Link>
+                            </div>
+                        );
+                    })
                 }
-            </ul>
+            </div>
+        </div>
     );
 };
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import PollsList from './PollsList';
 import * as pollActions from '../store/actions/poll';
-import "./Polls.css";
+// import "./Polls.css";
 
 export class Polls extends React.Component {
     async componentDidMount() {
@@ -11,7 +11,7 @@ export class Polls extends React.Component {
     }
     render() {
         let polls = (
-            <div className="Polls">
+            <div className="section">
                 {
                     this.props.polls.length > 0 ? 
                     (<PollsList polls={this.props.polls} />) :

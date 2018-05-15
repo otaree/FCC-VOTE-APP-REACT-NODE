@@ -33,62 +33,123 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         false,
-        <form
-          className="form"
-          onSubmit={[Function]}
+        <div
+          className="columns is-mobile"
 >
           <div
-                    className="form-control"
+                    className="column is-half is-offset-one-quarter"
           >
-                    <input
-                              onChange={[Function]}
-                              placeholder="Username"
-                              type="text"
-                              value=""
-                    />
+                    <form
+                              onSubmit={[Function]}
+                    >
+                              <div
+                                        className="field"
+                              >
+                                        <label
+                                                  className="label"
+                                        >
+                                                  Username
+                                        </label>
+                                        <div
+                                                  className="control has-icons-left"
+                                        >
+                                                  <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Username"
+                                                            type="text"
+                                                            value=""
+                                                  />
+                                                  <span
+                                                            className="icon is-small is-left"
+                                                  >
+                                                            <FaUser />
+                                                  </span>
+                                        </div>
+                              </div>
+                              <div
+                                        className="field"
+                              >
+                                        <label
+                                                  className="label"
+                                        >
+                                                  Email
+                                        </label>
+                                        <div
+                                                  className="control has-icons-left"
+                                        >
+                                                  <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Email"
+                                                            type="email"
+                                                            value=""
+                                                  />
+                                                  <span
+                                                            className="icon is-small is-left"
+                                                  >
+                                                            <FaEnvelope />
+                                                  </span>
+                                        </div>
+                              </div>
+                              <div
+                                        className="field"
+                              >
+                                        <label
+                                                  className="label"
+                                        >
+                                                  Password
+                                        </label>
+                                        <div
+                                                  className="control"
+                                        >
+                                                  <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Password"
+                                                            type="password"
+                                                            value=""
+                                                  />
+                                        </div>
+                              </div>
+                              <div
+                                        className="field"
+                              >
+                                        <label
+                                                  className="label"
+                                        >
+                                                  Confirm Password
+                                        </label>
+                                        <div
+                                                  className="control"
+                                        >
+                                                  <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Confirm Password"
+                                                            type="password"
+                                                            value=""
+                                                  />
+                                        </div>
+                              </div>
+                              <div
+                                        className="field"
+                              >
+                                        <div
+                                                  className="control"
+                                        >
+                                                  <input
+                                                            className="button is-primary"
+                                                            type="submit"
+                                                            value="Register"
+                                                  />
+                                        </div>
+                              </div>
+                    </form>
           </div>
-          <div
-                    className="form-control"
-          >
-                    <input
-                              onChange={[Function]}
-                              placeholder="Email"
-                              type="email"
-                              value=""
-                    />
-          </div>
-          <div
-                    className="form-control"
-          >
-                    <input
-                              onChange={[Function]}
-                              placeholder="Password"
-                              type="password"
-                              value=""
-                    />
-          </div>
-          <div
-                    className="form-control"
-          >
-                    <input
-                              onChange={[Function]}
-                              placeholder="Confirm Password"
-                              type="password"
-                              value=""
-                    />
-          </div>
-          <div
-                    className="form-control"
-          >
-                    <input
-                              className="btn"
-                              type="submit"
-                              value="Register"
-                    />
-          </div>
-</form>,
+</div>,
       ],
-      "className": "auth",
+      "className": "section",
     },
     "ref": null,
     "rendered": Array [
@@ -98,77 +159,346 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="form-control"
+          "children": <div
+            className="column is-half is-offset-one-quarter"
 >
-              <input
-                            onChange={[Function]}
-                            placeholder="Username"
-                            type="text"
-                            value=""
-              />
+            <form
+                        onSubmit={[Function]}
+            >
+                        <div
+                                    className="field"
+                        >
+                                    <label
+                                                className="label"
+                                    >
+                                                Username
+                                    </label>
+                                    <div
+                                                className="control has-icons-left"
+                                    >
+                                                <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Username"
+                                                            type="text"
+                                                            value=""
+                                                />
+                                                <span
+                                                            className="icon is-small is-left"
+                                                >
+                                                            <FaUser />
+                                                </span>
+                                    </div>
+                        </div>
+                        <div
+                                    className="field"
+                        >
+                                    <label
+                                                className="label"
+                                    >
+                                                Email
+                                    </label>
+                                    <div
+                                                className="control has-icons-left"
+                                    >
+                                                <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Email"
+                                                            type="email"
+                                                            value=""
+                                                />
+                                                <span
+                                                            className="icon is-small is-left"
+                                                >
+                                                            <FaEnvelope />
+                                                </span>
+                                    </div>
+                        </div>
+                        <div
+                                    className="field"
+                        >
+                                    <label
+                                                className="label"
+                                    >
+                                                Password
+                                    </label>
+                                    <div
+                                                className="control"
+                                    >
+                                                <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Password"
+                                                            type="password"
+                                                            value=""
+                                                />
+                                    </div>
+                        </div>
+                        <div
+                                    className="field"
+                        >
+                                    <label
+                                                className="label"
+                                    >
+                                                Confirm Password
+                                    </label>
+                                    <div
+                                                className="control"
+                                    >
+                                                <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Confirm Password"
+                                                            type="password"
+                                                            value=""
+                                                />
+                                    </div>
+                        </div>
+                        <div
+                                    className="field"
+                        >
+                                    <div
+                                                className="control"
+                                    >
+                                                <input
+                                                            className="button is-primary"
+                                                            type="submit"
+                                                            value="Register"
+                                                />
+                                    </div>
+                        </div>
+            </form>
 </div>,
-            <div
-              className="form-control"
->
-              <input
-                            onChange={[Function]}
-                            placeholder="Email"
-                            type="email"
-                            value=""
-              />
-</div>,
-            <div
-              className="form-control"
->
-              <input
-                            onChange={[Function]}
-                            placeholder="Password"
-                            type="password"
-                            value=""
-              />
-</div>,
-            <div
-              className="form-control"
->
-              <input
-                            onChange={[Function]}
-                            placeholder="Confirm Password"
-                            type="password"
-                            value=""
-              />
-</div>,
-            <div
-              className="form-control"
->
-              <input
-                            className="btn"
-                            type="submit"
-                            value="Register"
-              />
-</div>,
-          ],
-          "className": "form",
-          "onSubmit": [Function],
+          "className": "columns is-mobile",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <form
+              onSubmit={[Function]}
+>
+              <div
+                            className="field"
+              >
+                            <label
+                                          className="label"
+                            >
+                                          Username
+                            </label>
+                            <div
+                                          className="control has-icons-left"
+                            >
+                                          <input
+                                                        className="input"
+                                                        onChange={[Function]}
+                                                        placeholder="Username"
+                                                        type="text"
+                                                        value=""
+                                          />
+                                          <span
+                                                        className="icon is-small is-left"
+                                          >
+                                                        <FaUser />
+                                          </span>
+                            </div>
+              </div>
+              <div
+                            className="field"
+              >
+                            <label
+                                          className="label"
+                            >
+                                          Email
+                            </label>
+                            <div
+                                          className="control has-icons-left"
+                            >
+                                          <input
+                                                        className="input"
+                                                        onChange={[Function]}
+                                                        placeholder="Email"
+                                                        type="email"
+                                                        value=""
+                                          />
+                                          <span
+                                                        className="icon is-small is-left"
+                                          >
+                                                        <FaEnvelope />
+                                          </span>
+                            </div>
+              </div>
+              <div
+                            className="field"
+              >
+                            <label
+                                          className="label"
+                            >
+                                          Password
+                            </label>
+                            <div
+                                          className="control"
+                            >
+                                          <input
+                                                        className="input"
+                                                        onChange={[Function]}
+                                                        placeholder="Password"
+                                                        type="password"
+                                                        value=""
+                                          />
+                            </div>
+              </div>
+              <div
+                            className="field"
+              >
+                            <label
+                                          className="label"
+                            >
+                                          Confirm Password
+                            </label>
+                            <div
+                                          className="control"
+                            >
+                                          <input
+                                                        className="input"
+                                                        onChange={[Function]}
+                                                        placeholder="Confirm Password"
+                                                        type="password"
+                                                        value=""
+                                          />
+                            </div>
+              </div>
+              <div
+                            className="field"
+              >
+                            <div
+                                          className="control"
+                            >
+                                          <input
+                                                        className="button is-primary"
+                                                        type="submit"
+                                                        value="Register"
+                                          />
+                            </div>
+              </div>
+</form>,
+            "className": "column is-half is-offset-one-quarter",
+          },
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <input
-                  onChange={[Function]}
-                  placeholder="Username"
-                  type="text"
-                  value=""
-/>,
-                false,
+                <div
+                  className="field"
+>
+                  <label
+                                    className="label"
+                  >
+                                    Username
+                  </label>
+                  <div
+                                    className="control has-icons-left"
+                  >
+                                    <input
+                                                      className="input"
+                                                      onChange={[Function]}
+                                                      placeholder="Username"
+                                                      type="text"
+                                                      value=""
+                                    />
+                                    <span
+                                                      className="icon is-small is-left"
+                                    >
+                                                      <FaUser />
+                                    </span>
+                  </div>
+</div>,
+                <div
+                  className="field"
+>
+                  <label
+                                    className="label"
+                  >
+                                    Email
+                  </label>
+                  <div
+                                    className="control has-icons-left"
+                  >
+                                    <input
+                                                      className="input"
+                                                      onChange={[Function]}
+                                                      placeholder="Email"
+                                                      type="email"
+                                                      value=""
+                                    />
+                                    <span
+                                                      className="icon is-small is-left"
+                                    >
+                                                      <FaEnvelope />
+                                    </span>
+                  </div>
+</div>,
+                <div
+                  className="field"
+>
+                  <label
+                                    className="label"
+                  >
+                                    Password
+                  </label>
+                  <div
+                                    className="control"
+                  >
+                                    <input
+                                                      className="input"
+                                                      onChange={[Function]}
+                                                      placeholder="Password"
+                                                      type="password"
+                                                      value=""
+                                    />
+                  </div>
+</div>,
+                <div
+                  className="field"
+>
+                  <label
+                                    className="label"
+                  >
+                                    Confirm Password
+                  </label>
+                  <div
+                                    className="control"
+                  >
+                                    <input
+                                                      className="input"
+                                                      onChange={[Function]}
+                                                      placeholder="Confirm Password"
+                                                      type="password"
+                                                      value=""
+                                    />
+                  </div>
+</div>,
+                <div
+                  className="field"
+>
+                  <div
+                                    className="control"
+                  >
+                                    <input
+                                                      className="button is-primary"
+                                                      type="submit"
+                                                      value="Register"
+                                    />
+                  </div>
+</div>,
               ],
-              "className": "form-control",
+              "onSubmit": [Function],
             },
             "ref": null,
             "rendered": Array [
@@ -177,157 +507,434 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "onChange": [Function],
-                  "placeholder": "Username",
-                  "type": "text",
-                  "value": "",
+                  "children": Array [
+                    <label
+                      className="label"
+>
+                      Username
+</label>,
+                    <div
+                      className="control has-icons-left"
+>
+                      <input
+                                            className="input"
+                                            onChange={[Function]}
+                                            placeholder="Username"
+                                            type="text"
+                                            value=""
+                      />
+                      <span
+                                            className="icon is-small is-left"
+                      >
+                                            <FaUser />
+                      </span>
+</div>,
+                  ],
+                  "className": "field",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              false,
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <input
-                  onChange={[Function]}
-                  placeholder="Email"
-                  type="email"
-                  value=""
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Username",
+                      "className": "label",
+                    },
+                    "ref": null,
+                    "rendered": "Username",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          className="input"
+                          onChange={[Function]}
+                          placeholder="Username"
+                          type="text"
+                          value=""
 />,
-                false,
-              ],
-              "className": "form-control",
-            },
-            "ref": null,
-            "rendered": Array [
+                        <span
+                          className="icon is-small is-left"
+>
+                          <FaUser />
+</span>,
+                        false,
+                      ],
+                      "className": "control has-icons-left",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "input",
+                          "onChange": [Function],
+                          "placeholder": "Username",
+                          "type": "text",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <FaUser />,
+                          "className": "icon is-small is-left",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": "span",
+                      },
+                      false,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "onChange": [Function],
-                  "placeholder": "Email",
-                  "type": "email",
-                  "value": "",
+                  "children": Array [
+                    <label
+                      className="label"
+>
+                      Email
+</label>,
+                    <div
+                      className="control has-icons-left"
+>
+                      <input
+                                            className="input"
+                                            onChange={[Function]}
+                                            placeholder="Email"
+                                            type="email"
+                                            value=""
+                      />
+                      <span
+                                            className="icon is-small is-left"
+                      >
+                                            <FaEnvelope />
+                      </span>
+</div>,
+                  ],
+                  "className": "field",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              false,
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <input
-                  onChange={[Function]}
-                  placeholder="Password"
-                  type="password"
-                  value=""
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Email",
+                      "className": "label",
+                    },
+                    "ref": null,
+                    "rendered": "Email",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          className="input"
+                          onChange={[Function]}
+                          placeholder="Email"
+                          type="email"
+                          value=""
 />,
-                false,
-              ],
-              "className": "form-control",
-            },
-            "ref": null,
-            "rendered": Array [
+                        <span
+                          className="icon is-small is-left"
+>
+                          <FaEnvelope />
+</span>,
+                        false,
+                      ],
+                      "className": "control has-icons-left",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "input",
+                          "onChange": [Function],
+                          "placeholder": "Email",
+                          "type": "email",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <FaEnvelope />,
+                          "className": "icon is-small is-left",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": "span",
+                      },
+                      false,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "onChange": [Function],
-                  "placeholder": "Password",
-                  "type": "password",
-                  "value": "",
+                  "children": Array [
+                    <label
+                      className="label"
+>
+                      Password
+</label>,
+                    <div
+                      className="control"
+>
+                      <input
+                                            className="input"
+                                            onChange={[Function]}
+                                            placeholder="Password"
+                                            type="password"
+                                            value=""
+                      />
+</div>,
+                  ],
+                  "className": "field",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              false,
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <input
-                  onChange={[Function]}
-                  placeholder="Confirm Password"
-                  type="password"
-                  value=""
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Password",
+                      "className": "label",
+                    },
+                    "ref": null,
+                    "rendered": "Password",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          className="input"
+                          onChange={[Function]}
+                          placeholder="Password"
+                          type="password"
+                          value=""
 />,
-                false,
-              ],
-              "className": "form-control",
-            },
-            "ref": null,
-            "rendered": Array [
+                        false,
+                      ],
+                      "className": "control",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "input",
+                          "onChange": [Function],
+                          "placeholder": "Password",
+                          "type": "password",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      false,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "onChange": [Function],
-                  "placeholder": "Confirm Password",
-                  "type": "password",
-                  "value": "",
+                  "children": Array [
+                    <label
+                      className="label"
+>
+                      Confirm Password
+</label>,
+                    <div
+                      className="control"
+>
+                      <input
+                                            className="input"
+                                            onChange={[Function]}
+                                            placeholder="Confirm Password"
+                                            type="password"
+                                            value=""
+                      />
+</div>,
+                  ],
+                  "className": "field",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              false,
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <input
-                className="btn"
-                type="submit"
-                value="Register"
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Confirm Password",
+                      "className": "label",
+                    },
+                    "ref": null,
+                    "rendered": "Confirm Password",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          className="input"
+                          onChange={[Function]}
+                          placeholder="Confirm Password"
+                          type="password"
+                          value=""
 />,
-              "className": "form-control",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "btn",
-                "type": "submit",
-                "value": "Register",
+                        false,
+                      ],
+                      "className": "control",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "input",
+                          "onChange": [Function],
+                          "placeholder": "Confirm Password",
+                          "type": "password",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      false,
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
               },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            "type": "div",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="control"
+>
+                    <input
+                                        className="button is-primary"
+                                        type="submit"
+                                        value="Register"
+                    />
+</div>,
+                  "className": "field",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <input
+                      className="button is-primary"
+                      type="submit"
+                      value="Register"
+/>,
+                    "className": "control",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "button is-primary",
+                      "type": "submit",
+                      "value": "Register",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "form",
           },
-        ],
-        "type": "form",
+          "type": "div",
+        },
+        "type": "div",
       },
     ],
     "type": "section",
@@ -340,62 +947,123 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           false,
-          <form
-            className="form"
-            onSubmit={[Function]}
+          <div
+            className="columns is-mobile"
 >
             <div
-                        className="form-control"
+                        className="column is-half is-offset-one-quarter"
             >
-                        <input
-                                    onChange={[Function]}
-                                    placeholder="Username"
-                                    type="text"
-                                    value=""
-                        />
+                        <form
+                                    onSubmit={[Function]}
+                        >
+                                    <div
+                                                className="field"
+                                    >
+                                                <label
+                                                            className="label"
+                                                >
+                                                            Username
+                                                </label>
+                                                <div
+                                                            className="control has-icons-left"
+                                                >
+                                                            <input
+                                                                        className="input"
+                                                                        onChange={[Function]}
+                                                                        placeholder="Username"
+                                                                        type="text"
+                                                                        value=""
+                                                            />
+                                                            <span
+                                                                        className="icon is-small is-left"
+                                                            >
+                                                                        <FaUser />
+                                                            </span>
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="field"
+                                    >
+                                                <label
+                                                            className="label"
+                                                >
+                                                            Email
+                                                </label>
+                                                <div
+                                                            className="control has-icons-left"
+                                                >
+                                                            <input
+                                                                        className="input"
+                                                                        onChange={[Function]}
+                                                                        placeholder="Email"
+                                                                        type="email"
+                                                                        value=""
+                                                            />
+                                                            <span
+                                                                        className="icon is-small is-left"
+                                                            >
+                                                                        <FaEnvelope />
+                                                            </span>
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="field"
+                                    >
+                                                <label
+                                                            className="label"
+                                                >
+                                                            Password
+                                                </label>
+                                                <div
+                                                            className="control"
+                                                >
+                                                            <input
+                                                                        className="input"
+                                                                        onChange={[Function]}
+                                                                        placeholder="Password"
+                                                                        type="password"
+                                                                        value=""
+                                                            />
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="field"
+                                    >
+                                                <label
+                                                            className="label"
+                                                >
+                                                            Confirm Password
+                                                </label>
+                                                <div
+                                                            className="control"
+                                                >
+                                                            <input
+                                                                        className="input"
+                                                                        onChange={[Function]}
+                                                                        placeholder="Confirm Password"
+                                                                        type="password"
+                                                                        value=""
+                                                            />
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="field"
+                                    >
+                                                <div
+                                                            className="control"
+                                                >
+                                                            <input
+                                                                        className="button is-primary"
+                                                                        type="submit"
+                                                                        value="Register"
+                                                            />
+                                                </div>
+                                    </div>
+                        </form>
             </div>
-            <div
-                        className="form-control"
-            >
-                        <input
-                                    onChange={[Function]}
-                                    placeholder="Email"
-                                    type="email"
-                                    value=""
-                        />
-            </div>
-            <div
-                        className="form-control"
-            >
-                        <input
-                                    onChange={[Function]}
-                                    placeholder="Password"
-                                    type="password"
-                                    value=""
-                        />
-            </div>
-            <div
-                        className="form-control"
-            >
-                        <input
-                                    onChange={[Function]}
-                                    placeholder="Confirm Password"
-                                    type="password"
-                                    value=""
-                        />
-            </div>
-            <div
-                        className="form-control"
-            >
-                        <input
-                                    className="btn"
-                                    type="submit"
-                                    value="Register"
-                        />
-            </div>
-</form>,
+</div>,
         ],
-        "className": "auth",
+        "className": "section",
       },
       "ref": null,
       "rendered": Array [
@@ -405,77 +1073,346 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <div
-                className="form-control"
+            "children": <div
+              className="column is-half is-offset-one-quarter"
 >
-                <input
-                                onChange={[Function]}
-                                placeholder="Username"
-                                type="text"
-                                value=""
-                />
+              <form
+                            onSubmit={[Function]}
+              >
+                            <div
+                                          className="field"
+                            >
+                                          <label
+                                                        className="label"
+                                          >
+                                                        Username
+                                          </label>
+                                          <div
+                                                        className="control has-icons-left"
+                                          >
+                                                        <input
+                                                                      className="input"
+                                                                      onChange={[Function]}
+                                                                      placeholder="Username"
+                                                                      type="text"
+                                                                      value=""
+                                                        />
+                                                        <span
+                                                                      className="icon is-small is-left"
+                                                        >
+                                                                      <FaUser />
+                                                        </span>
+                                          </div>
+                            </div>
+                            <div
+                                          className="field"
+                            >
+                                          <label
+                                                        className="label"
+                                          >
+                                                        Email
+                                          </label>
+                                          <div
+                                                        className="control has-icons-left"
+                                          >
+                                                        <input
+                                                                      className="input"
+                                                                      onChange={[Function]}
+                                                                      placeholder="Email"
+                                                                      type="email"
+                                                                      value=""
+                                                        />
+                                                        <span
+                                                                      className="icon is-small is-left"
+                                                        >
+                                                                      <FaEnvelope />
+                                                        </span>
+                                          </div>
+                            </div>
+                            <div
+                                          className="field"
+                            >
+                                          <label
+                                                        className="label"
+                                          >
+                                                        Password
+                                          </label>
+                                          <div
+                                                        className="control"
+                                          >
+                                                        <input
+                                                                      className="input"
+                                                                      onChange={[Function]}
+                                                                      placeholder="Password"
+                                                                      type="password"
+                                                                      value=""
+                                                        />
+                                          </div>
+                            </div>
+                            <div
+                                          className="field"
+                            >
+                                          <label
+                                                        className="label"
+                                          >
+                                                        Confirm Password
+                                          </label>
+                                          <div
+                                                        className="control"
+                                          >
+                                                        <input
+                                                                      className="input"
+                                                                      onChange={[Function]}
+                                                                      placeholder="Confirm Password"
+                                                                      type="password"
+                                                                      value=""
+                                                        />
+                                          </div>
+                            </div>
+                            <div
+                                          className="field"
+                            >
+                                          <div
+                                                        className="control"
+                                          >
+                                                        <input
+                                                                      className="button is-primary"
+                                                                      type="submit"
+                                                                      value="Register"
+                                                        />
+                                          </div>
+                            </div>
+              </form>
 </div>,
-              <div
-                className="form-control"
->
-                <input
-                                onChange={[Function]}
-                                placeholder="Email"
-                                type="email"
-                                value=""
-                />
-</div>,
-              <div
-                className="form-control"
->
-                <input
-                                onChange={[Function]}
-                                placeholder="Password"
-                                type="password"
-                                value=""
-                />
-</div>,
-              <div
-                className="form-control"
->
-                <input
-                                onChange={[Function]}
-                                placeholder="Confirm Password"
-                                type="password"
-                                value=""
-                />
-</div>,
-              <div
-                className="form-control"
->
-                <input
-                                className="btn"
-                                type="submit"
-                                value="Register"
-                />
-</div>,
-            ],
-            "className": "form",
-            "onSubmit": [Function],
+            "className": "columns is-mobile",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <form
+                onSubmit={[Function]}
+>
+                <div
+                                className="field"
+                >
+                                <label
+                                                className="label"
+                                >
+                                                Username
+                                </label>
+                                <div
+                                                className="control has-icons-left"
+                                >
+                                                <input
+                                                                className="input"
+                                                                onChange={[Function]}
+                                                                placeholder="Username"
+                                                                type="text"
+                                                                value=""
+                                                />
+                                                <span
+                                                                className="icon is-small is-left"
+                                                >
+                                                                <FaUser />
+                                                </span>
+                                </div>
+                </div>
+                <div
+                                className="field"
+                >
+                                <label
+                                                className="label"
+                                >
+                                                Email
+                                </label>
+                                <div
+                                                className="control has-icons-left"
+                                >
+                                                <input
+                                                                className="input"
+                                                                onChange={[Function]}
+                                                                placeholder="Email"
+                                                                type="email"
+                                                                value=""
+                                                />
+                                                <span
+                                                                className="icon is-small is-left"
+                                                >
+                                                                <FaEnvelope />
+                                                </span>
+                                </div>
+                </div>
+                <div
+                                className="field"
+                >
+                                <label
+                                                className="label"
+                                >
+                                                Password
+                                </label>
+                                <div
+                                                className="control"
+                                >
+                                                <input
+                                                                className="input"
+                                                                onChange={[Function]}
+                                                                placeholder="Password"
+                                                                type="password"
+                                                                value=""
+                                                />
+                                </div>
+                </div>
+                <div
+                                className="field"
+                >
+                                <label
+                                                className="label"
+                                >
+                                                Confirm Password
+                                </label>
+                                <div
+                                                className="control"
+                                >
+                                                <input
+                                                                className="input"
+                                                                onChange={[Function]}
+                                                                placeholder="Confirm Password"
+                                                                type="password"
+                                                                value=""
+                                                />
+                                </div>
+                </div>
+                <div
+                                className="field"
+                >
+                                <div
+                                                className="control"
+                                >
+                                                <input
+                                                                className="button is-primary"
+                                                                type="submit"
+                                                                value="Register"
+                                                />
+                                </div>
+                </div>
+</form>,
+              "className": "column is-half is-offset-one-quarter",
+            },
+            "ref": null,
+            "rendered": Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <input
-                    onChange={[Function]}
-                    placeholder="Username"
-                    type="text"
-                    value=""
-/>,
-                  false,
+                  <div
+                    className="field"
+>
+                    <label
+                                        className="label"
+                    >
+                                        Username
+                    </label>
+                    <div
+                                        className="control has-icons-left"
+                    >
+                                        <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Username"
+                                                            type="text"
+                                                            value=""
+                                        />
+                                        <span
+                                                            className="icon is-small is-left"
+                                        >
+                                                            <FaUser />
+                                        </span>
+                    </div>
+</div>,
+                  <div
+                    className="field"
+>
+                    <label
+                                        className="label"
+                    >
+                                        Email
+                    </label>
+                    <div
+                                        className="control has-icons-left"
+                    >
+                                        <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Email"
+                                                            type="email"
+                                                            value=""
+                                        />
+                                        <span
+                                                            className="icon is-small is-left"
+                                        >
+                                                            <FaEnvelope />
+                                        </span>
+                    </div>
+</div>,
+                  <div
+                    className="field"
+>
+                    <label
+                                        className="label"
+                    >
+                                        Password
+                    </label>
+                    <div
+                                        className="control"
+                    >
+                                        <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Password"
+                                                            type="password"
+                                                            value=""
+                                        />
+                    </div>
+</div>,
+                  <div
+                    className="field"
+>
+                    <label
+                                        className="label"
+                    >
+                                        Confirm Password
+                    </label>
+                    <div
+                                        className="control"
+                    >
+                                        <input
+                                                            className="input"
+                                                            onChange={[Function]}
+                                                            placeholder="Confirm Password"
+                                                            type="password"
+                                                            value=""
+                                        />
+                    </div>
+</div>,
+                  <div
+                    className="field"
+>
+                    <div
+                                        className="control"
+                    >
+                                        <input
+                                                            className="button is-primary"
+                                                            type="submit"
+                                                            value="Register"
+                                        />
+                    </div>
+</div>,
                 ],
-                "className": "form-control",
+                "onSubmit": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -484,157 +1421,434 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "onChange": [Function],
-                    "placeholder": "Username",
-                    "type": "text",
-                    "value": "",
+                    "children": Array [
+                      <label
+                        className="label"
+>
+                        Username
+</label>,
+                      <div
+                        className="control has-icons-left"
+>
+                        <input
+                                                className="input"
+                                                onChange={[Function]}
+                                                placeholder="Username"
+                                                type="text"
+                                                value=""
+                        />
+                        <span
+                                                className="icon is-small is-left"
+                        >
+                                                <FaUser />
+                        </span>
+</div>,
+                    ],
+                    "className": "field",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                false,
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <input
-                    onChange={[Function]}
-                    placeholder="Email"
-                    type="email"
-                    value=""
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Username",
+                        "className": "label",
+                      },
+                      "ref": null,
+                      "rendered": "Username",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            className="input"
+                            onChange={[Function]}
+                            placeholder="Username"
+                            type="text"
+                            value=""
 />,
-                  false,
-                ],
-                "className": "form-control",
-              },
-              "ref": null,
-              "rendered": Array [
+                          <span
+                            className="icon is-small is-left"
+>
+                            <FaUser />
+</span>,
+                          false,
+                        ],
+                        "className": "control has-icons-left",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "input",
+                            "onChange": [Function],
+                            "placeholder": "Username",
+                            "type": "text",
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <FaUser />,
+                            "className": "icon is-small is-left",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {},
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": "span",
+                        },
+                        false,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "onChange": [Function],
-                    "placeholder": "Email",
-                    "type": "email",
-                    "value": "",
+                    "children": Array [
+                      <label
+                        className="label"
+>
+                        Email
+</label>,
+                      <div
+                        className="control has-icons-left"
+>
+                        <input
+                                                className="input"
+                                                onChange={[Function]}
+                                                placeholder="Email"
+                                                type="email"
+                                                value=""
+                        />
+                        <span
+                                                className="icon is-small is-left"
+                        >
+                                                <FaEnvelope />
+                        </span>
+</div>,
+                    ],
+                    "className": "field",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                false,
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <input
-                    onChange={[Function]}
-                    placeholder="Password"
-                    type="password"
-                    value=""
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Email",
+                        "className": "label",
+                      },
+                      "ref": null,
+                      "rendered": "Email",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            className="input"
+                            onChange={[Function]}
+                            placeholder="Email"
+                            type="email"
+                            value=""
 />,
-                  false,
-                ],
-                "className": "form-control",
-              },
-              "ref": null,
-              "rendered": Array [
+                          <span
+                            className="icon is-small is-left"
+>
+                            <FaEnvelope />
+</span>,
+                          false,
+                        ],
+                        "className": "control has-icons-left",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "input",
+                            "onChange": [Function],
+                            "placeholder": "Email",
+                            "type": "email",
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <FaEnvelope />,
+                            "className": "icon is-small is-left",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {},
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": "span",
+                        },
+                        false,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "onChange": [Function],
-                    "placeholder": "Password",
-                    "type": "password",
-                    "value": "",
+                    "children": Array [
+                      <label
+                        className="label"
+>
+                        Password
+</label>,
+                      <div
+                        className="control"
+>
+                        <input
+                                                className="input"
+                                                onChange={[Function]}
+                                                placeholder="Password"
+                                                type="password"
+                                                value=""
+                        />
+</div>,
+                    ],
+                    "className": "field",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                false,
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <input
-                    onChange={[Function]}
-                    placeholder="Confirm Password"
-                    type="password"
-                    value=""
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Password",
+                        "className": "label",
+                      },
+                      "ref": null,
+                      "rendered": "Password",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            className="input"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
 />,
-                  false,
-                ],
-                "className": "form-control",
-              },
-              "ref": null,
-              "rendered": Array [
+                          false,
+                        ],
+                        "className": "control",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "input",
+                            "onChange": [Function],
+                            "placeholder": "Password",
+                            "type": "password",
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        false,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "onChange": [Function],
-                    "placeholder": "Confirm Password",
-                    "type": "password",
-                    "value": "",
+                    "children": Array [
+                      <label
+                        className="label"
+>
+                        Confirm Password
+</label>,
+                      <div
+                        className="control"
+>
+                        <input
+                                                className="input"
+                                                onChange={[Function]}
+                                                placeholder="Confirm Password"
+                                                type="password"
+                                                value=""
+                        />
+</div>,
+                    ],
+                    "className": "field",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                false,
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <input
-                  className="btn"
-                  type="submit"
-                  value="Register"
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Confirm Password",
+                        "className": "label",
+                      },
+                      "ref": null,
+                      "rendered": "Confirm Password",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            className="input"
+                            onChange={[Function]}
+                            placeholder="Confirm Password"
+                            type="password"
+                            value=""
 />,
-                "className": "form-control",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "btn",
-                  "type": "submit",
-                  "value": "Register",
+                          false,
+                        ],
+                        "className": "control",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "input",
+                            "onChange": [Function],
+                            "placeholder": "Confirm Password",
+                            "type": "password",
+                            "value": "",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        false,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
                 },
-                "ref": null,
-                "rendered": null,
-                "type": "input",
-              },
-              "type": "div",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="control"
+>
+                      <input
+                                            className="button is-primary"
+                                            type="submit"
+                                            value="Register"
+                      />
+</div>,
+                    "className": "field",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <input
+                        className="button is-primary"
+                        type="submit"
+                        value="Register"
+/>,
+                      "className": "control",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "button is-primary",
+                        "type": "submit",
+                        "value": "Register",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "form",
             },
-          ],
-          "type": "form",
+            "type": "div",
+          },
+          "type": "div",
         },
       ],
       "type": "section",

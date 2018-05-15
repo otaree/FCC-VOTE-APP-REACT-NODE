@@ -8,7 +8,7 @@ import App from './components/App';
 import * as authActions from './store/actions/auth';
 import authReducer from './store/reducers/auth';
 import pollReducer from './store/reducers/poll';
-import './index.css';
+import '../node_modules/bulma/css/bulma.min.css';
 
 const rootReducer = combineReducers({
     auth: authReducer,

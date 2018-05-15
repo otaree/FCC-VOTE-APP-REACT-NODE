@@ -11,7 +11,7 @@ describe("PollsList", () => {
     const pollsList = shallow(<PollsList {...props} />);
 
     it('renders correctly', () => {
-        expect(pollsList.find('li').length).toEqual(polls.length);
+        expect(pollsList.find('Link').length).toEqual(polls.length);
         expect(pollsList).toMatchSnapshot();
     });
 });

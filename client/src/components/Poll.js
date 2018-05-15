@@ -6,7 +6,7 @@ import { isEmpty } from 'lodash';
 import PollStats from './PollStats';
 import VotePoll from './VotePoll';
 import * as pollActions from '../store/actions/poll';
-import "./Poll.css";
+// import "./Poll.css";
 
 export class Poll extends React.Component {
     async componentDidMount() {
@@ -29,32 +29,56 @@ export class Poll extends React.Component {
         let editButton;
         if (this.props.poll) {
             if (this.props.userId) {
-                editButton = this.props.userId === this.props.poll.author._id ? (<Link to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
+                editButton = this.props.userId === this.props.poll.author._id ? (<Link className="level-item has-text-centered" to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
             }
             if (this.props.poll.voters.indexOf(this.props.uid) === -1) {
                 poll = (
-                    <div className="Poll_body">
-                        <div className="Poll_header">
-                            <h2>{this.props.poll.question}</h2>
-                            <p>by {this.props.poll.author.name}</p>
-                            <div className="Poll_control">
-                                { editButton }
+                    <div className="section">
+                        <div className="container">
+                            <div className="columns is-mobile">
+                                <div className="column is-half is-offset-one-quarter">
+                                    <div className="card">
+                                        <div className="card-content">
+                                            <div className="level">
+                                                <h2 className="title level-item has-text-centered">{this.props.poll.question}</h2>
+                                            </div>
+                                            <div className="level">
+                                                <p className="subtitle level-item has-text-centered">by {this.props.poll.author.name}</p>
+                                            </div>
+                                            <div className="level">
+                                                { editButton }
+                                            </div>
+                                            <VotePoll poll={this.props.poll} onVote={this.voteHandler} />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <VotePoll poll={this.props.poll} onVote={this.voteHandler} />
                     </div>
                 );                
             } else {
                 poll = (
-                    <div className="Poll_body">
-                        <div className="Poll_header">
-                            <h2>{this.props.poll.question}</h2>
-                            <p>by {this.props.poll.author.name}</p>
-                            <div className="Poll_control">
-                                { editButton }
+                    <div className="section">
+                        <div className="container">
+                            <div className="columns is-mobile">
+                                <div className="column is-half is-offset-one-quarter">
+                                    <div className="card">
+                                        <div className="card-content">
+                                            <div className="level">
+                                                <h2 className="title level-item has-text-centered">{this.props.poll.question}</h2>
+                                            </div>
+                                            <div className="level">
+                                                <p className="subtitle level-item has-text-centered">by {this.props.poll.author.name}</p>
+                                            </div>
+                                            <div className="level">
+                                                { editButton }
+                                            </div>
+                                            <PollStats poll={this.props.poll} />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <PollStats poll={this.props.poll} />
                     </div>
                 );
             }

@@ -87,7 +87,7 @@ describe('SignUp', () => {
         });
 
         it('should render the error message', () => {
-            expect(signUp.find('.auth-server-fail').length).toEqual(1);
+            expect(signUp.find('.auth-error').length).toEqual(1);
         });
     });
 

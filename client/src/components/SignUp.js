@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import isEmail from 'validator/lib/isEmail';
 import axios from 'axios';
-
+import FaUser from 'react-icons/lib/fa/user';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 
 import * as authActions from '../store/actions/auth';
 
@@ -134,68 +135,102 @@ export class SignUp extends React.Component {
 
     render() {
         return (
-            <section className="auth">
+            <section className="section">
                 {
                     this.props.authError.isError &&
-                    <div className="auth-server-fail">{this.props.authError.value}</div>
-                }
-                <form className="form" onSubmit={this.submitHandler}>
-                    <div className="form-control">
-                        <input 
-                            type="text"
-                            placeholder="Username"
-                            value={this.state.username.value}
-                            onChange={this.nameChangeHandler}
-                        />
-                        {
-                            this.state.username.error &&
-                            <div className="auth-error">Please provide a username</div>
-                        }
+                    <div className="notification is-danger auth-error">
+                        <button className="delete"></button>
+                        {this.props.authError.value}
                     </div>
-                    <div className="form-control">
-                        <input 
-                             type="email"
-                             placeholder="Email"
-                             value={this.state.email.value}
-                             onChange={this.emailChangeHandler}
-                         />
-                         {
-                             this.state.email.error &&
-                             <div className="auth-error">Invalid email</div>
-                         }
-                   </div>
-                   <div className="form-control">
-                        <input 
-                             type="password"
-                             placeholder="Password"
-                             value={this.state.password.value}
-                             onChange={this.passwordChangeHandler}
-                         />
-                         {
-                             this.state.password.error &&
-                             <div className="auth-error">Invalid password</div>
-                         }
-                   </div>
-                   <div className="form-control">
-                        <input 
-                             type="password"
-                             placeholder="Confirm Password"
-                             value={this.state.password2.value}
-                             onChange={this.password2ChangeHandler}
-                         />
-                         {
-                             this.state.password2.error &&
-                             <div className="auth-error">Passwords dose not match</div>
-                         }
-                   </div>
-                   <div className="form-control">
-                        <input 
-                            className="btn"
-                             type="submit"
-                             value="Register"
-                         />
-                   </div>
-                </form>
+                }
+                <div className="columns is-mobile">
+                    <div className="column is-half is-offset-one-quarter">
+                        <form  onSubmit={this.submitHandler}>
+                            <div className="field">
+                                <label className="label">Username</label>
+                                <div className="control has-icons-left">
+                                    <input 
+                                        className="input"
+                                        type="text"
+                                        placeholder="Username"
+                                        value={this.state.username.value}
+                                        onChange={this.nameChangeHandler}
+                                    />
+                                    <span className="icon is-small is-left">
+                                         <FaUser />
+                                     </span>
+                                    {
+                                        this.state.username.error &&
+                                        <div className="auth-error">Please provide a username</div>
+                                    }
+                                </div>
+                            </div>
+                            <div className="field">
+                                <label className="label">Email</label>
+                                <div className="control has-icons-left">
+                                    <input 
+                                        className="input"
+                                         type="email"
+                                         placeholder="Email"
+                                         value={this.state.email.value}
+                                         onChange={this.emailChangeHandler}
+                                     />
+                                     <span className="icon is-small is-left">
+                                         <FaEnvelope />
+                                     </span>
+                                     {
+                                         this.state.email.error &&
+                                         <div className="auth-error">Invalid email</div>
+                                     }
+                                </div>
+                            </div>
+                                 
+                            <div className="field">
+                                <label className="label">Password</label>
+                                <div className="control">
+                                     <input 
+                                         className="input"
+                                          type="password"
+                                          placeholder="Password"
+                                          value={this.state.password.value}
+                                          onChange={this.passwordChangeHandler}
+                                      />
+                                      {
+                                          this.state.password.error &&
+                                          <div className="auth-error">Invalid password</div>
+                                      }
+                                </div>
+                            </div>
+                                  
+                            <div className="field">
+                                <label className="label">Confirm Password</label>
+                                <div className="control">
+                                     <input 
+                                         className="input"
+                                          type="password"
+                                          placeholder="Confirm Password"
+                                          value={this.state.password2.value}
+                                          onChange={this.password2ChangeHandler}
+                                      />
+                                      {
+                                          this.state.password2.error &&
+                                          <div className="auth-error">Passwords dose not match</div>
+                                      }
+                                </div>
+                            </div>
+                                  
+                            <div className="field">
+                                <div className="control">
+                                     <input 
+                                         className="button is-primary"
+                                          type="submit"
+                                          value="Register"
+                                      />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
         );
     }
