@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-// import './Header.css';
+import { NavLink, Link } from 'react-router-dom';
+import FaUser from 'react-icons/lib/fa/user';
+import MdSettings from 'react-icons/lib/md/settings-applications';
+import MdPoll from 'react-icons/lib/md/poll';
 
 class Header extends React.Component {
     state = {
@@ -30,9 +31,10 @@ class Header extends React.Component {
                 <div className="navbar-end">
                     <NavLink className="navbar-item" to="/" exact activeClassName="is-active">Home</NavLink>
                     <div className="navbar-item has-dropdown is-hoverable">
-                        <NavLink className="navbar-link" to="/poll/create" exact activeClassName="is-active">Create Poll</NavLink>
-                        <div className="navbar-dropdown">
-                            <NavLink className="navbar-item" to="/password/change" activeClassName="is-active">Change Password</NavLink>                
+                        <NavLink className="navbar-link" to="/polls/user" exact activeClassName="is-active"> <FaUser style={{ marginRight: "3px"}} /> {this.props.username}</NavLink>
+                        <div className="navbar-dropdown is-boxed">
+                            <NavLink className="navbar-item" to="/poll/create" exact activeClassName="is-active">Create Poll</NavLink>
+                            <NavLink className="navbar-item" to="/password/change" activeClassName="is-active"><MdSettings size={20} /></NavLink>                
                             <NavLink className="navbar-item" to="/logout" activeClassName="is-active">Logout</NavLink>
                         </div>
                     </div>
@@ -45,9 +47,11 @@ class Header extends React.Component {
                 <nav className="navbar is-info">
                     <div className="container">
                         <div className="navbar-brand">
-                            <a className="navbar-item">
-                                <h2 className="is-size-3">POLL</h2>
-                            </a>
+                            <Link className="navbar-item" to="/">
+                                <MdPoll 
+                                    size={50}
+                                />
+                            </Link>
             
                             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" onClick={this.clickHandler}>
                                 <span aria-hidden="true"></span>

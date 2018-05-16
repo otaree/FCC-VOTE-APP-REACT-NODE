@@ -22,6 +22,7 @@ ShallowWrapper {
 >
         <Header
                 isAuth={undefined}
+                username={undefined}
         />
         <Main
                 isAuth={undefined}
@@ -37,6 +38,7 @@ ShallowWrapper {
         "children": Array [
           <Header
             isAuth={undefined}
+            username={undefined}
 />,
           <Main
             isAuth={undefined}
@@ -52,6 +54,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "isAuth": undefined,
+            "username": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -84,6 +87,7 @@ ShallowWrapper {
 >
           <Header
                     isAuth={undefined}
+                    username={undefined}
           />
           <Main
                     isAuth={undefined}
@@ -99,6 +103,7 @@ ShallowWrapper {
           "children": Array [
             <Header
               isAuth={undefined}
+              username={undefined}
 />,
             <Main
               isAuth={undefined}
@@ -114,6 +119,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "isAuth": undefined,
+              "username": undefined,
             },
             "ref": null,
             "rendered": null,

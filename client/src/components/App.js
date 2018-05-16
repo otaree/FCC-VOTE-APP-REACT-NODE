@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 
 import Header from './Header';
 import Main from './Main';
-import './App.css';
 
 export  class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
                 <div className="App">
-                    <Header isAuth={this.props.isAuthenticated} />
+                    <Header isAuth={this.props.isAuthenticated} username={this.props.username} />
                     <Main isAuth={this.props.isAuthenticated} />
                 </div>                
             </BrowserRouter>
@@ -21,7 +20,8 @@ export  class App extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.auth.token !== null,
+        username: state.auth.name
     };
 };
 

@@ -85,62 +85,6 @@ describe('Poll Actions', () => {
             store = createMockStore(initialState);
         });
 
-        describe("fetchPolls", () => {
-            it('should generate async fetch polls action and set the polls', () => {
-                const response = polls;
-    
-                mock.onGet('http://localhost:5000/polls').reply(200, response);
-    
-                const expectedActions = [{
-                    type: constants.POLL_LOADING,
-                    loading: true
-                }, {
-                    type: constants.POLL_SET_POLLS,
-                    loading: false,
-                    error: {
-                        isError: false,
-                        value: ''
-                    },
-                    polls
-                }];
-    
-                return store
-                        .dispatch(actions.fetchPolls())
-                        .then(() => {
-                            const dispatchedActions = store.getActions();
-                            expect(dispatchedActions[0]).toEqual(expectedActions[0]);
-                            expect(dispatchedActions[1]).toEqual(expectedActions[1]);
-                        })
-            });
-    
-    
-            it('should generate async fetch polls action and fail', () => {
-                const response = polls;
-    
-                mock.onGet('http://localhost:5000/polls').reply(400, {});
-    
-                const expectedActions = [{
-                    type: constants.POLL_LOADING,
-                    loading: true
-                }, {
-                    type: constants.POLL_FAIL,
-                    loading: false,
-                    error: {
-                        isError: true,
-                        value: "Network Problem"
-                    }
-                }];
-    
-                return store
-                        .dispatch(actions.fetchPolls())
-                        .catch(() => {
-                            const dispatchedActions = store.getActions();
-                            expect(dispatchedActions[0]).toEqual(expectedActions[0]);
-                            expect(dispatchedActions[1]).toEqual(expectedActions[1]);
-                        })
-            });
-        });
-
         describe("fetchPoll", () => {
             it("should generate async fetch poll and success", () => {
                 const response = polls[0];

@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Polls from './Polls';
+import UserPolls from './UserPolls';
 import Poll from './Poll';
 import CreatePoll from './CreatePoll';
 import EditPoll from './EditPoll';
@@ -24,6 +25,7 @@ const Main = (props) => {
         switchRoutes = (
             <Switch>
                 <Route path="/" exact component={Polls} />
+                <Route path="/polls/user" exact component={UserPolls} />                
                 <Route path="/poll/create" exact component={CreatePoll} />                                            
                 <Route path="/poll/:id" exact component={Poll} />                            
                 <Route path="/poll/:id/edit" exact component={EditPoll} />                            

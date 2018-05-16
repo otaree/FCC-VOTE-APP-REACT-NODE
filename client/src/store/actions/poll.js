@@ -60,6 +60,7 @@ export const fetchPolls = () => {
     }
 };
 
+
 export const fetchPoll = (id) => {
     return async dispatch => {
         dispatch(pollLoading());
