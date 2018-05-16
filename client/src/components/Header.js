@@ -29,9 +29,13 @@ class Header extends React.Component {
             navlinks = (
                 <div className="navbar-end">
                     <NavLink className="navbar-item" to="/" exact activeClassName="is-active">Home</NavLink>
-                    <NavLink className="navbar-item" to="/poll/create" exact activeClassName="is-active">Create Poll</NavLink>
-                    <NavLink className="navbar-item" to="/password/change" activeClassName="is-active">Change Password</NavLink>                
-                    <NavLink className="navbar-item" to="/logout" activeClassName="is-active">Logout</NavLink>
+                    <div className="navbar-item has-dropdown is-hoverable">
+                        <NavLink className="navbar-link" to="/poll/create" exact activeClassName="is-active">Create Poll</NavLink>
+                        <div className="navbar-dropdown">
+                            <NavLink className="navbar-item" to="/password/change" activeClassName="is-active">Change Password</NavLink>                
+                            <NavLink className="navbar-item" to="/logout" activeClassName="is-active">Logout</NavLink>
+                        </div>
+                    </div>
                 </div>
             );
         }

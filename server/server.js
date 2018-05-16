@@ -48,6 +48,17 @@ app.get('/polls', async (req, res) => {
     }
 });
 
+app.get('/polls/user', authenticate, async (req, res) => {
+    const user = req.user;
+
+    try {
+        const polls = await Poll.find({ author: user._id }).select("question _id");
+        res.send(polls);
+    } catch (e) {
+        res.status(400).send();
+    }
+});
+
 app.get('/poll/:id',  async (req, res) => {
     const id = req.params.id;
 

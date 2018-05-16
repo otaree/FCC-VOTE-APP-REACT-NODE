@@ -86,6 +86,22 @@ describe('SERVER', function () {
         });
     });
 
+    describe('GET /polls/user', () => {
+        it('should return all polls by a user', done => {
+            const token = users[1].tokens[0].token;
+
+            request(app)
+                .get('/polls/user')
+                .set('x-auth', token)
+                .expect(200)
+                .expect(res => {
+                    expect(res.body.length).to.equal(1);
+                    expect(res.body[0]._id).to.equal(polls[1]._id.toHexString());
+                })
+                .end(done);
+        });
+    });
+
     describe('GET /poll/:id', () => {
         it('should return a poll', done => {
             const id = polls[0]._id.toHexString();
