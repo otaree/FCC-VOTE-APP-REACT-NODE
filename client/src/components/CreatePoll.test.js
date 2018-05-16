@@ -38,7 +38,7 @@ describe('CreatePoll', () => {
         });
 
         it('should add options', () => {
-            createPoll.find('.addOption__btn').simulate('click', {
+            createPoll.find('.addOption').simulate('click', {
                 preventDefault: () => {}
             });
             expect(createPoll.state('options').length).toEqual(3);

@@ -21,49 +21,70 @@ ShallowWrapper {
         className="navbar is-info"
 >
         <div
-                className="navbar-brand"
-        >
-                <a
-                        className="navbar-item"
-                >
-                        <h2
-                                className="is-size-3"
-                        >
-                                POLL
-                        </h2>
-                </a>
-        </div>
-        <div
-                className="navbar-menu is-active"
+                className="container"
         >
                 <div
-                        className="navbar-end"
+                        className="navbar-brand"
                 >
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
+                        <a
                                 className="navbar-item"
-                                exact={true}
-                                to="/"
                         >
-                                Home
-                        </NavLink>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="navbar-item"
-                                to="/login"
+                                <h2
+                                        className="is-size-3"
+                                >
+                                        POLL
+                                </h2>
+                        </a>
+                        <a
+                                aria-expanded="false"
+                                aria-label="menu"
+                                className="navbar-burger"
+                                onClick={[Function]}
+                                role="button"
                         >
-                                Login
-                        </NavLink>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="navbar-item"
-                                to="/signup"
+                                <span
+                                        aria-hidden="true"
+                                />
+                                <span
+                                        aria-hidden="true"
+                                />
+                                <span
+                                        aria-hidden="true"
+                                />
+                        </a>
+                </div>
+                <div
+                        className="navbar-menu false"
+                >
+                        <div
+                                className="navbar-end"
                         >
-                                Sign up
-                        </NavLink>
+                                <NavLink
+                                        activeClassName="is-active"
+                                        ariaCurrent="true"
+                                        className="navbar-item"
+                                        exact={true}
+                                        to="/"
+                                >
+                                        Home
+                                </NavLink>
+                                <NavLink
+                                        activeClassName="is-active"
+                                        ariaCurrent="true"
+                                        className="navbar-item"
+                                        to="/login"
+                                >
+                                        Login
+                                </NavLink>
+                                <NavLink
+                                        activeClassName="is-active"
+                                        ariaCurrent="true"
+                                        className="navbar-item"
+                                        to="/signup"
+                                >
+                                        Sign up
+                                </NavLink>
+                        </div>
                 </div>
         </div>
 </nav>,
@@ -74,241 +95,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <div
-            className="navbar-brand"
->
-            <a
-                        className="navbar-item"
-            >
-                        <h2
-                                    className="is-size-3"
-                        >
-                                    POLL
-                        </h2>
-            </a>
-</div>,
-          <div
-            className="navbar-menu is-active"
->
-            <div
-                        className="navbar-end"
-            >
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="navbar-item"
-                                    exact={true}
-                                    to="/"
-                        >
-                                    Home
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="navbar-item"
-                                    to="/login"
-                        >
-                                    Login
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="navbar-item"
-                                    to="/signup"
-                        >
-                                    Sign up
-                        </NavLink>
-            </div>
-</div>,
-        ],
-        "className": "navbar is-info",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <a
-              className="navbar-item"
->
-              <h2
-                            className="is-size-3"
-              >
-                            POLL
-              </h2>
-</a>,
-            "className": "navbar-brand",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <h2
-                className="is-size-3"
->
-                POLL
-</h2>,
-              "className": "navbar-item",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "POLL",
-                "className": "is-size-3",
-              },
-              "ref": null,
-              "rendered": "POLL",
-              "type": "h2",
-            },
-            "type": "a",
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
-              className="navbar-end"
->
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="navbar-item"
-                            exact={true}
-                            to="/"
-              >
-                            Home
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="navbar-item"
-                            to="/login"
-              >
-                            Login
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="navbar-item"
-                            to="/signup"
-              >
-                            Sign up
-              </NavLink>
-</div>,
-            "className": "navbar-menu is-active",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="navbar-item"
-                  exact={true}
-                  to="/"
->
-                  Home
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="navbar-item"
-                  to="/login"
->
-                  Login
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="navbar-item"
-                  to="/signup"
->
-                  Sign up
-</NavLink>,
-              ],
-              "className": "navbar-end",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Home",
-                  "className": "navbar-item",
-                  "exact": true,
-                  "to": "/",
-                },
-                "ref": null,
-                "rendered": "Home",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Login",
-                  "className": "navbar-item",
-                  "to": "/login",
-                },
-                "ref": null,
-                "rendered": "Login",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Sign up",
-                  "className": "navbar-item",
-                  "to": "/signup",
-                },
-                "ref": null,
-                "rendered": "Sign up",
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-          "type": "div",
-        },
-      ],
-      "type": "nav",
-    },
-    "type": "header",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <nav
-          className="navbar is-info"
+        "children": <div
+          className="container"
 >
           <div
                     className="navbar-brand"
@@ -322,15 +110,32 @@ ShallowWrapper {
                                         POLL
                               </h2>
                     </a>
+                    <a
+                              aria-expanded="false"
+                              aria-label="menu"
+                              className="navbar-burger"
+                              onClick={[Function]}
+                              role="button"
+                    >
+                              <span
+                                        aria-hidden="true"
+                              />
+                              <span
+                                        aria-hidden="true"
+                              />
+                              <span
+                                        aria-hidden="true"
+                              />
+                    </a>
           </div>
           <div
-                    className="navbar-menu is-active"
+                    className="navbar-menu false"
           >
                     <div
                               className="navbar-end"
                     >
                               <NavLink
-                                        activeClassName="active"
+                                        activeClassName="is-active"
                                         ariaCurrent="true"
                                         className="navbar-item"
                                         exact={true}
@@ -339,7 +144,7 @@ ShallowWrapper {
                                         Home
                               </NavLink>
                               <NavLink
-                                        activeClassName="active"
+                                        activeClassName="is-active"
                                         ariaCurrent="true"
                                         className="navbar-item"
                                         to="/login"
@@ -347,7 +152,7 @@ ShallowWrapper {
                                         Login
                               </NavLink>
                               <NavLink
-                                        activeClassName="active"
+                                        activeClassName="is-active"
                                         ariaCurrent="true"
                                         className="navbar-item"
                                         to="/signup"
@@ -356,7 +161,8 @@ ShallowWrapper {
                               </NavLink>
                     </div>
           </div>
-</nav>,
+</div>,
+        "className": "navbar is-info",
       },
       "ref": null,
       "rendered": Object {
@@ -377,15 +183,32 @@ ShallowWrapper {
                                           POLL
                             </h2>
               </a>
+              <a
+                            aria-expanded="false"
+                            aria-label="menu"
+                            className="navbar-burger"
+                            onClick={[Function]}
+                            role="button"
+              >
+                            <span
+                                          aria-hidden="true"
+                            />
+                            <span
+                                          aria-hidden="true"
+                            />
+                            <span
+                                          aria-hidden="true"
+                            />
+              </a>
 </div>,
             <div
-              className="navbar-menu is-active"
+              className="navbar-menu false"
 >
               <div
                             className="navbar-end"
               >
                             <NavLink
-                                          activeClassName="active"
+                                          activeClassName="is-active"
                                           ariaCurrent="true"
                                           className="navbar-item"
                                           exact={true}
@@ -394,7 +217,7 @@ ShallowWrapper {
                                           Home
                             </NavLink>
                             <NavLink
-                                          activeClassName="active"
+                                          activeClassName="is-active"
                                           ariaCurrent="true"
                                           className="navbar-item"
                                           to="/login"
@@ -402,7 +225,7 @@ ShallowWrapper {
                                           Login
                             </NavLink>
                             <NavLink
-                                          activeClassName="active"
+                                          activeClassName="is-active"
                                           ariaCurrent="true"
                                           className="navbar-item"
                                           to="/signup"
@@ -412,7 +235,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "navbar is-info",
+          "className": "container",
         },
         "ref": null,
         "rendered": Array [
@@ -421,45 +244,126 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                className="navbar-item"
+              "children": Array [
+                <a
+                  className="navbar-item"
 >
-                <h2
-                                className="is-size-3"
-                >
-                                POLL
-                </h2>
+                  <h2
+                                    className="is-size-3"
+                  >
+                                    POLL
+                  </h2>
 </a>,
+                <a
+                  aria-expanded="false"
+                  aria-label="menu"
+                  className="navbar-burger"
+                  onClick={[Function]}
+                  role="button"
+>
+                  <span
+                                    aria-hidden="true"
+                  />
+                  <span
+                                    aria-hidden="true"
+                  />
+                  <span
+                                    aria-hidden="true"
+                  />
+</a>,
+              ],
               "className": "navbar-brand",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <h2
-                  className="is-size-3"
->
-                  POLL
-</h2>,
-                "className": "navbar-item",
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "POLL",
-                  "className": "is-size-3",
+                  "children": <h2
+                    className="is-size-3"
+>
+                    POLL
+</h2>,
+                  "className": "navbar-item",
                 },
                 "ref": null,
-                "rendered": "POLL",
-                "type": "h2",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "POLL",
+                    "className": "is-size-3",
+                  },
+                  "ref": null,
+                  "rendered": "POLL",
+                  "type": "h2",
+                },
+                "type": "a",
               },
-              "type": "a",
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-expanded": "false",
+                  "aria-label": "menu",
+                  "children": Array [
+                    <span
+                      aria-hidden="true"
+/>,
+                    <span
+                      aria-hidden="true"
+/>,
+                    <span
+                      aria-hidden="true"
+/>,
+                  ],
+                  "className": "navbar-burger",
+                  "onClick": [Function],
+                  "role": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-hidden": "true",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-hidden": "true",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-hidden": "true",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                ],
+                "type": "a",
+              },
+            ],
             "type": "div",
           },
           Object {
@@ -471,7 +375,7 @@ ShallowWrapper {
                 className="navbar-end"
 >
                 <NavLink
-                                activeClassName="active"
+                                activeClassName="is-active"
                                 ariaCurrent="true"
                                 className="navbar-item"
                                 exact={true}
@@ -480,7 +384,7 @@ ShallowWrapper {
                                 Home
                 </NavLink>
                 <NavLink
-                                activeClassName="active"
+                                activeClassName="is-active"
                                 ariaCurrent="true"
                                 className="navbar-item"
                                 to="/login"
@@ -488,7 +392,7 @@ ShallowWrapper {
                                 Login
                 </NavLink>
                 <NavLink
-                                activeClassName="active"
+                                activeClassName="is-active"
                                 ariaCurrent="true"
                                 className="navbar-item"
                                 to="/signup"
@@ -496,7 +400,7 @@ ShallowWrapper {
                                 Sign up
                 </NavLink>
 </div>,
-              "className": "navbar-menu is-active",
+              "className": "navbar-menu false",
             },
             "ref": null,
             "rendered": Object {
@@ -506,7 +410,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <NavLink
-                    activeClassName="active"
+                    activeClassName="is-active"
                     ariaCurrent="true"
                     className="navbar-item"
                     exact={true}
@@ -515,7 +419,7 @@ ShallowWrapper {
                     Home
 </NavLink>,
                   <NavLink
-                    activeClassName="active"
+                    activeClassName="is-active"
                     ariaCurrent="true"
                     className="navbar-item"
                     to="/login"
@@ -523,7 +427,7 @@ ShallowWrapper {
                     Login
 </NavLink>,
                   <NavLink
-                    activeClassName="active"
+                    activeClassName="is-active"
                     ariaCurrent="true"
                     className="navbar-item"
                     to="/signup"
@@ -540,7 +444,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "activeClassName": "active",
+                    "activeClassName": "is-active",
                     "ariaCurrent": "true",
                     "children": "Home",
                     "className": "navbar-item",
@@ -556,7 +460,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "activeClassName": "active",
+                    "activeClassName": "is-active",
                     "ariaCurrent": "true",
                     "children": "Login",
                     "className": "navbar-item",
@@ -571,7 +475,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "activeClassName": "active",
+                    "activeClassName": "is-active",
                     "ariaCurrent": "true",
                     "children": "Sign up",
                     "className": "navbar-item",
@@ -587,6 +491,494 @@ ShallowWrapper {
             "type": "div",
           },
         ],
+        "type": "div",
+      },
+      "type": "nav",
+    },
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <nav
+          className="navbar is-info"
+>
+          <div
+                    className="container"
+          >
+                    <div
+                              className="navbar-brand"
+                    >
+                              <a
+                                        className="navbar-item"
+                              >
+                                        <h2
+                                                  className="is-size-3"
+                                        >
+                                                  POLL
+                                        </h2>
+                              </a>
+                              <a
+                                        aria-expanded="false"
+                                        aria-label="menu"
+                                        className="navbar-burger"
+                                        onClick={[Function]}
+                                        role="button"
+                              >
+                                        <span
+                                                  aria-hidden="true"
+                                        />
+                                        <span
+                                                  aria-hidden="true"
+                                        />
+                                        <span
+                                                  aria-hidden="true"
+                                        />
+                              </a>
+                    </div>
+                    <div
+                              className="navbar-menu false"
+                    >
+                              <div
+                                        className="navbar-end"
+                              >
+                                        <NavLink
+                                                  activeClassName="is-active"
+                                                  ariaCurrent="true"
+                                                  className="navbar-item"
+                                                  exact={true}
+                                                  to="/"
+                                        >
+                                                  Home
+                                        </NavLink>
+                                        <NavLink
+                                                  activeClassName="is-active"
+                                                  ariaCurrent="true"
+                                                  className="navbar-item"
+                                                  to="/login"
+                                        >
+                                                  Login
+                                        </NavLink>
+                                        <NavLink
+                                                  activeClassName="is-active"
+                                                  ariaCurrent="true"
+                                                  className="navbar-item"
+                                                  to="/signup"
+                                        >
+                                                  Sign up
+                                        </NavLink>
+                              </div>
+                    </div>
+          </div>
+</nav>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="container"
+>
+            <div
+                        className="navbar-brand"
+            >
+                        <a
+                                    className="navbar-item"
+                        >
+                                    <h2
+                                                className="is-size-3"
+                                    >
+                                                POLL
+                                    </h2>
+                        </a>
+                        <a
+                                    aria-expanded="false"
+                                    aria-label="menu"
+                                    className="navbar-burger"
+                                    onClick={[Function]}
+                                    role="button"
+                        >
+                                    <span
+                                                aria-hidden="true"
+                                    />
+                                    <span
+                                                aria-hidden="true"
+                                    />
+                                    <span
+                                                aria-hidden="true"
+                                    />
+                        </a>
+            </div>
+            <div
+                        className="navbar-menu false"
+            >
+                        <div
+                                    className="navbar-end"
+                        >
+                                    <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                exact={true}
+                                                to="/"
+                                    >
+                                                Home
+                                    </NavLink>
+                                    <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                to="/login"
+                                    >
+                                                Login
+                                    </NavLink>
+                                    <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                to="/signup"
+                                    >
+                                                Sign up
+                                    </NavLink>
+                        </div>
+            </div>
+</div>,
+          "className": "navbar is-info",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="navbar-brand"
+>
+                <a
+                                className="navbar-item"
+                >
+                                <h2
+                                                className="is-size-3"
+                                >
+                                                POLL
+                                </h2>
+                </a>
+                <a
+                                aria-expanded="false"
+                                aria-label="menu"
+                                className="navbar-burger"
+                                onClick={[Function]}
+                                role="button"
+                >
+                                <span
+                                                aria-hidden="true"
+                                />
+                                <span
+                                                aria-hidden="true"
+                                />
+                                <span
+                                                aria-hidden="true"
+                                />
+                </a>
+</div>,
+              <div
+                className="navbar-menu false"
+>
+                <div
+                                className="navbar-end"
+                >
+                                <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                exact={true}
+                                                to="/"
+                                >
+                                                Home
+                                </NavLink>
+                                <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                to="/login"
+                                >
+                                                Login
+                                </NavLink>
+                                <NavLink
+                                                activeClassName="is-active"
+                                                ariaCurrent="true"
+                                                className="navbar-item"
+                                                to="/signup"
+                                >
+                                                Sign up
+                                </NavLink>
+                </div>
+</div>,
+            ],
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a
+                    className="navbar-item"
+>
+                    <h2
+                                        className="is-size-3"
+                    >
+                                        POLL
+                    </h2>
+</a>,
+                  <a
+                    aria-expanded="false"
+                    aria-label="menu"
+                    className="navbar-burger"
+                    onClick={[Function]}
+                    role="button"
+>
+                    <span
+                                        aria-hidden="true"
+                    />
+                    <span
+                                        aria-hidden="true"
+                    />
+                    <span
+                                        aria-hidden="true"
+                    />
+</a>,
+                ],
+                "className": "navbar-brand",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h2
+                      className="is-size-3"
+>
+                      POLL
+</h2>,
+                    "className": "navbar-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "POLL",
+                      "className": "is-size-3",
+                    },
+                    "ref": null,
+                    "rendered": "POLL",
+                    "type": "h2",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-expanded": "false",
+                    "aria-label": "menu",
+                    "children": Array [
+                      <span
+                        aria-hidden="true"
+/>,
+                      <span
+                        aria-hidden="true"
+/>,
+                      <span
+                        aria-hidden="true"
+/>,
+                    ],
+                    "className": "navbar-burger",
+                    "onClick": [Function],
+                    "role": "button",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "aria-hidden": "true",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "aria-hidden": "true",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "aria-hidden": "true",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                  ],
+                  "type": "a",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="navbar-end"
+>
+                  <NavLink
+                                    activeClassName="is-active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    exact={true}
+                                    to="/"
+                  >
+                                    Home
+                  </NavLink>
+                  <NavLink
+                                    activeClassName="is-active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    to="/login"
+                  >
+                                    Login
+                  </NavLink>
+                  <NavLink
+                                    activeClassName="is-active"
+                                    ariaCurrent="true"
+                                    className="navbar-item"
+                                    to="/signup"
+                  >
+                                    Sign up
+                  </NavLink>
+</div>,
+                "className": "navbar-menu false",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <NavLink
+                      activeClassName="is-active"
+                      ariaCurrent="true"
+                      className="navbar-item"
+                      exact={true}
+                      to="/"
+>
+                      Home
+</NavLink>,
+                    <NavLink
+                      activeClassName="is-active"
+                      ariaCurrent="true"
+                      className="navbar-item"
+                      to="/login"
+>
+                      Login
+</NavLink>,
+                    <NavLink
+                      activeClassName="is-active"
+                      ariaCurrent="true"
+                      className="navbar-item"
+                      to="/signup"
+>
+                      Sign up
+</NavLink>,
+                  ],
+                  "className": "navbar-end",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "is-active",
+                      "ariaCurrent": "true",
+                      "children": "Home",
+                      "className": "navbar-item",
+                      "exact": true,
+                      "to": "/",
+                    },
+                    "ref": null,
+                    "rendered": "Home",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "is-active",
+                      "ariaCurrent": "true",
+                      "children": "Login",
+                      "className": "navbar-item",
+                      "to": "/login",
+                    },
+                    "ref": null,
+                    "rendered": "Login",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "is-active",
+                      "ariaCurrent": "true",
+                      "children": "Sign up",
+                      "className": "navbar-item",
+                      "to": "/signup",
+                    },
+                    "ref": null,
+                    "rendered": "Sign up",
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
         "type": "nav",
       },
       "type": "header",

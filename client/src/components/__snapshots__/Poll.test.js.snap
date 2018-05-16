@@ -45,67 +45,67 @@ ShallowWrapper {
         className="container"
 >
         <div
-                className="columns is-mobile"
+                className="box"
         >
                 <div
-                        className="column is-half is-offset-one-quarter"
+                        className="level"
                 >
                         <div
-                                className="card"
+                                className="level-item"
                         >
-                                <div
-                                        className="card-content"
+                                <h2
+                                        className="title"
                                 >
-                                        <div
-                                                className="level"
-                                        >
-                                                <h2
-                                                        className="title level-item has-text-centered"
-                                                >
-                                                        Yes or No?
-                                                </h2>
-                                        </div>
-                                        <div
-                                                className="level"
-                                        >
-                                                <p
-                                                        className="subtitle level-item has-text-centered"
-                                                >
-                                                        by 
-                                                </p>
-                                        </div>
-                                        <div
-                                                className="level"
-                                        />
-                                        <VotePoll
-                                                onVote={[Function]}
-                                                poll={
-                                                        Object {
-                                                                "_id": "1",
-                                                                "author": "123abc",
-                                                                "createdAt": 1000,
-                                                                "options": Array [
-                                                                  Object {
-                                                                    "_id": "101",
-                                                                    "value": "Yes",
-                                                                    "votes": 1,
-                                                                  },
-                                                                  Object {
-                                                                    "_id": "102",
-                                                                    "value": "No",
-                                                                    "votes": 0,
-                                                                  },
-                                                                ],
-                                                                "question": "Yes or No?",
-                                                                "voters": Array [
-                                                                  "123abc",
-                                                                ],
-                                                              }
-                                                }
-                                        />
-                                </div>
+                                        Yes or No?
+                                </h2>
                         </div>
                 </div>
+                <div
+                        className="level"
+                >
+                        <div
+                                className="level-item"
+                        >
+                                <p
+                                        className="subtitle"
+                                >
+                                        by 
+                                </p>
+                        </div>
+                </div>
+                <div
+                        className="level"
+                >
+                        <div
+                                className="level-item"
+                        />
+                </div>
+                <VotePoll
+                        onVote={[Function]}
+                        poll={
+                                Object {
+                                        "_id": "1",
+                                        "author": "123abc",
+                                        "createdAt": 1000,
+                                        "options": Array [
+                                          Object {
+                                            "_id": "101",
+                                            "value": "Yes",
+                                            "votes": 1,
+                                          },
+                                          Object {
+                                            "_id": "102",
+                                            "value": "No",
+                                            "votes": 0,
+                                          },
+                                        ],
+                                        "question": "Yes or No?",
+                                        "voters": Array [
+                                          "123abc",
+                                        ],
+                                      }
+                        }
+                />
         </div>
 </div>,
       "className": "section",
@@ -117,67 +117,67 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="columns is-mobile"
+          className="box"
 >
           <div
-                    className="column is-half is-offset-one-quarter"
+                    className="level"
           >
                     <div
-                              className="card"
+                              className="level-item"
                     >
-                              <div
-                                        className="card-content"
+                              <h2
+                                        className="title"
                               >
-                                        <div
-                                                  className="level"
-                                        >
-                                                  <h2
-                                                            className="title level-item has-text-centered"
-                                                  >
-                                                            Yes or No?
-                                                  </h2>
-                                        </div>
-                                        <div
-                                                  className="level"
-                                        >
-                                                  <p
-                                                            className="subtitle level-item has-text-centered"
-                                                  >
-                                                            by 
-                                                  </p>
-                                        </div>
-                                        <div
-                                                  className="level"
-                                        />
-                                        <VotePoll
-                                                  onVote={[Function]}
-                                                  poll={
-                                                            Object {
-                                                                      "_id": "1",
-                                                                      "author": "123abc",
-                                                                      "createdAt": 1000,
-                                                                      "options": Array [
-                                                                        Object {
-                                                                          "_id": "101",
-                                                                          "value": "Yes",
-                                                                          "votes": 1,
-                                                                        },
-                                                                        Object {
-                                                                          "_id": "102",
-                                                                          "value": "No",
-                                                                          "votes": 0,
-                                                                        },
-                                                                      ],
-                                                                      "question": "Yes or No?",
-                                                                      "voters": Array [
-                                                                        "123abc",
-                                                                      ],
-                                                                    }
-                                                  }
-                                        />
-                              </div>
+                                        Yes or No?
+                              </h2>
                     </div>
           </div>
+          <div
+                    className="level"
+          >
+                    <div
+                              className="level-item"
+                    >
+                              <p
+                                        className="subtitle"
+                              >
+                                        by 
+                              </p>
+                    </div>
+          </div>
+          <div
+                    className="level"
+          >
+                    <div
+                              className="level-item"
+                    />
+          </div>
+          <VotePoll
+                    onVote={[Function]}
+                    poll={
+                              Object {
+                                        "_id": "1",
+                                        "author": "123abc",
+                                        "createdAt": 1000,
+                                        "options": Array [
+                                          Object {
+                                            "_id": "101",
+                                            "value": "Yes",
+                                            "votes": 1,
+                                          },
+                                          Object {
+                                            "_id": "102",
+                                            "value": "No",
+                                            "votes": 0,
+                                          },
+                                        ],
+                                        "question": "Yes or No?",
+                                        "voters": Array [
+                                          "123abc",
+                                        ],
+                                      }
+                    }
+          />
 </div>,
         "className": "container",
       },
@@ -187,188 +187,86 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div
-            className="column is-half is-offset-one-quarter"
->
+          "children": Array [
             <div
-                        className="card"
-            >
-                        <div
-                                    className="card-content"
-                        >
-                                    <div
-                                                className="level"
-                                    >
-                                                <h2
-                                                            className="title level-item has-text-centered"
-                                                >
-                                                            Yes or No?
-                                                </h2>
-                                    </div>
-                                    <div
-                                                className="level"
-                                    >
-                                                <p
-                                                            className="subtitle level-item has-text-centered"
-                                                >
-                                                            by 
-                                                </p>
-                                    </div>
-                                    <div
-                                                className="level"
-                                    />
-                                    <VotePoll
-                                                onVote={[Function]}
-                                                poll={
-                                                            Object {
-                                                                        "_id": "1",
-                                                                        "author": "123abc",
-                                                                        "createdAt": 1000,
-                                                                        "options": Array [
-                                                                          Object {
-                                                                            "_id": "101",
-                                                                            "value": "Yes",
-                                                                            "votes": 1,
-                                                                          },
-                                                                          Object {
-                                                                            "_id": "102",
-                                                                            "value": "No",
-                                                                            "votes": 0,
-                                                                          },
-                                                                        ],
-                                                                        "question": "Yes or No?",
-                                                                        "voters": Array [
-                                                                          "123abc",
-                                                                        ],
-                                                                      }
-                                                }
-                                    />
-                        </div>
-            </div>
-</div>,
-          "className": "columns is-mobile",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
-              className="card"
+              className="level"
 >
               <div
-                            className="card-content"
+                            className="level-item"
               >
-                            <div
-                                          className="level"
+                            <h2
+                                          className="title"
                             >
-                                          <h2
-                                                        className="title level-item has-text-centered"
-                                          >
-                                                        Yes or No?
-                                          </h2>
-                            </div>
-                            <div
-                                          className="level"
-                            >
-                                          <p
-                                                        className="subtitle level-item has-text-centered"
-                                          >
-                                                        by 
-                                          </p>
-                            </div>
-                            <div
-                                          className="level"
-                            />
-                            <VotePoll
-                                          onVote={[Function]}
-                                          poll={
-                                                        Object {
-                                                                      "_id": "1",
-                                                                      "author": "123abc",
-                                                                      "createdAt": 1000,
-                                                                      "options": Array [
-                                                                        Object {
-                                                                          "_id": "101",
-                                                                          "value": "Yes",
-                                                                          "votes": 1,
-                                                                        },
-                                                                        Object {
-                                                                          "_id": "102",
-                                                                          "value": "No",
-                                                                          "votes": 0,
-                                                                        },
-                                                                      ],
-                                                                      "question": "Yes or No?",
-                                                                      "voters": Array [
-                                                                        "123abc",
-                                                                      ],
-                                                                    }
-                                          }
-                            />
+                                          Yes or No?
+                            </h2>
               </div>
 </div>,
-            "className": "column is-half is-offset-one-quarter",
-          },
-          "ref": null,
-          "rendered": Object {
+            <div
+              className="level"
+>
+              <div
+                            className="level-item"
+              >
+                            <p
+                                          className="subtitle"
+                            >
+                                          by 
+                            </p>
+              </div>
+</div>,
+            <div
+              className="level"
+>
+              <div
+                            className="level-item"
+              />
+</div>,
+            <VotePoll
+              onVote={[Function]}
+              poll={
+                            Object {
+                                          "_id": "1",
+                                          "author": "123abc",
+                                          "createdAt": 1000,
+                                          "options": Array [
+                                            Object {
+                                              "_id": "101",
+                                              "value": "Yes",
+                                              "votes": 1,
+                                            },
+                                            Object {
+                                              "_id": "102",
+                                              "value": "No",
+                                              "votes": 0,
+                                            },
+                                          ],
+                                          "question": "Yes or No?",
+                                          "voters": Array [
+                                            "123abc",
+                                          ],
+                                        }
+              }
+/>,
+          ],
+          "className": "box",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": <div
-                className="card-content"
+                className="level-item"
 >
-                <div
-                                className="level"
+                <h2
+                                className="title"
                 >
-                                <h2
-                                                className="title level-item has-text-centered"
-                                >
-                                                Yes or No?
-                                </h2>
-                </div>
-                <div
-                                className="level"
-                >
-                                <p
-                                                className="subtitle level-item has-text-centered"
-                                >
-                                                by 
-                                </p>
-                </div>
-                <div
-                                className="level"
-                />
-                <VotePoll
-                                onVote={[Function]}
-                                poll={
-                                                Object {
-                                                                "_id": "1",
-                                                                "author": "123abc",
-                                                                "createdAt": 1000,
-                                                                "options": Array [
-                                                                  Object {
-                                                                    "_id": "101",
-                                                                    "value": "Yes",
-                                                                    "votes": 1,
-                                                                  },
-                                                                  Object {
-                                                                    "_id": "102",
-                                                                    "value": "No",
-                                                                    "votes": 0,
-                                                                  },
-                                                                ],
-                                                                "question": "Yes or No?",
-                                                                "voters": Array [
-                                                                  "123abc",
-                                                                ],
-                                                              }
-                                }
-                />
+                                Yes or No?
+                </h2>
 </div>,
-              "className": "card",
+              "className": "level",
             },
             "ref": null,
             "rendered": Object {
@@ -376,175 +274,145 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="level"
+                "children": <h2
+                  className="title"
 >
-                    <h2
-                                        className="title level-item has-text-centered"
-                    >
-                                        Yes or No?
-                    </h2>
-</div>,
-                  <div
-                    className="level"
->
-                    <p
-                                        className="subtitle level-item has-text-centered"
-                    >
-                                        by 
-                    </p>
-</div>,
-                  <div
-                    className="level"
-/>,
-                  <VotePoll
-                    onVote={[Function]}
-                    poll={
-                                        Object {
-                                                            "_id": "1",
-                                                            "author": "123abc",
-                                                            "createdAt": 1000,
-                                                            "options": Array [
-                                                              Object {
-                                                                "_id": "101",
-                                                                "value": "Yes",
-                                                                "votes": 1,
-                                                              },
-                                                              Object {
-                                                                "_id": "102",
-                                                                "value": "No",
-                                                                "votes": 0,
-                                                              },
-                                                            ],
-                                                            "question": "Yes or No?",
-                                                            "voters": Array [
-                                                              "123abc",
-                                                            ],
-                                                          }
-                    }
-/>,
-                ],
-                "className": "card-content",
+                  Yes or No?
+</h2>,
+                "className": "level-item",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <h2
-                      className="title level-item has-text-centered"
->
-                      Yes or No?
-</h2>,
-                    "className": "level",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Yes or No?",
-                      "className": "title level-item has-text-centered",
-                    },
-                    "ref": null,
-                    "rendered": "Yes or No?",
-                    "type": "h2",
-                  },
-                  "type": "div",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Yes or No?",
+                  "className": "title",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p
-                      className="subtitle level-item has-text-centered"
->
-                      by 
-</p>,
-                    "className": "level",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        "by ",
-                        undefined,
-                      ],
-                      "className": "subtitle level-item has-text-centered",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      "by ",
-                      undefined,
-                    ],
-                    "type": "p",
-                  },
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "level",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "onVote": [Function],
-                    "poll": Object {
-                      "_id": "1",
-                      "author": "123abc",
-                      "createdAt": 1000,
-                      "options": Array [
-                        Object {
-                          "_id": "101",
-                          "value": "Yes",
-                          "votes": 1,
-                        },
-                        Object {
-                          "_id": "102",
-                          "value": "No",
-                          "votes": 0,
-                        },
-                      ],
-                      "question": "Yes or No?",
-                      "voters": Array [
-                        "123abc",
-                      ],
-                    },
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
+                "ref": null,
+                "rendered": "Yes or No?",
+                "type": "h2",
+              },
               "type": "div",
             },
             "type": "div",
           },
-          "type": "div",
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="level-item"
+>
+                <p
+                                className="subtitle"
+                >
+                                by 
+                </p>
+</div>,
+              "className": "level",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="subtitle"
+>
+                  by 
+</p>,
+                "className": "level-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "by ",
+                    undefined,
+                  ],
+                  "className": "subtitle",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "by ",
+                  undefined,
+                ],
+                "type": "p",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="level-item"
+/>,
+              "className": "level",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "level-item",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "onVote": [Function],
+              "poll": Object {
+                "_id": "1",
+                "author": "123abc",
+                "createdAt": 1000,
+                "options": Array [
+                  Object {
+                    "_id": "101",
+                    "value": "Yes",
+                    "votes": 1,
+                  },
+                  Object {
+                    "_id": "102",
+                    "value": "No",
+                    "votes": 0,
+                  },
+                ],
+                "question": "Yes or No?",
+                "voters": Array [
+                  "123abc",
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": "div",
       },
       "type": "div",
     },
-    "type": "div",
+    "type": "section",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -556,67 +424,67 @@ ShallowWrapper {
           className="container"
 >
           <div
-                    className="columns is-mobile"
+                    className="box"
           >
                     <div
-                              className="column is-half is-offset-one-quarter"
+                              className="level"
                     >
                               <div
-                                        className="card"
+                                        className="level-item"
                               >
-                                        <div
-                                                  className="card-content"
+                                        <h2
+                                                  className="title"
                                         >
-                                                  <div
-                                                            className="level"
-                                                  >
-                                                            <h2
-                                                                      className="title level-item has-text-centered"
-                                                            >
-                                                                      Yes or No?
-                                                            </h2>
-                                                  </div>
-                                                  <div
-                                                            className="level"
-                                                  >
-                                                            <p
-                                                                      className="subtitle level-item has-text-centered"
-                                                            >
-                                                                      by 
-                                                            </p>
-                                                  </div>
-                                                  <div
-                                                            className="level"
-                                                  />
-                                                  <VotePoll
-                                                            onVote={[Function]}
-                                                            poll={
-                                                                      Object {
-                                                                                "_id": "1",
-                                                                                "author": "123abc",
-                                                                                "createdAt": 1000,
-                                                                                "options": Array [
-                                                                                  Object {
-                                                                                    "_id": "101",
-                                                                                    "value": "Yes",
-                                                                                    "votes": 1,
-                                                                                  },
-                                                                                  Object {
-                                                                                    "_id": "102",
-                                                                                    "value": "No",
-                                                                                    "votes": 0,
-                                                                                  },
-                                                                                ],
-                                                                                "question": "Yes or No?",
-                                                                                "voters": Array [
-                                                                                  "123abc",
-                                                                                ],
-                                                                              }
-                                                            }
-                                                  />
-                                        </div>
+                                                  Yes or No?
+                                        </h2>
                               </div>
                     </div>
+                    <div
+                              className="level"
+                    >
+                              <div
+                                        className="level-item"
+                              >
+                                        <p
+                                                  className="subtitle"
+                                        >
+                                                  by 
+                                        </p>
+                              </div>
+                    </div>
+                    <div
+                              className="level"
+                    >
+                              <div
+                                        className="level-item"
+                              />
+                    </div>
+                    <VotePoll
+                              onVote={[Function]}
+                              poll={
+                                        Object {
+                                                  "_id": "1",
+                                                  "author": "123abc",
+                                                  "createdAt": 1000,
+                                                  "options": Array [
+                                                    Object {
+                                                      "_id": "101",
+                                                      "value": "Yes",
+                                                      "votes": 1,
+                                                    },
+                                                    Object {
+                                                      "_id": "102",
+                                                      "value": "No",
+                                                      "votes": 0,
+                                                    },
+                                                  ],
+                                                  "question": "Yes or No?",
+                                                  "voters": Array [
+                                                    "123abc",
+                                                  ],
+                                                }
+                              }
+                    />
           </div>
 </div>,
         "className": "section",
@@ -628,67 +496,67 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="columns is-mobile"
+            className="box"
 >
             <div
-                        className="column is-half is-offset-one-quarter"
+                        className="level"
             >
                         <div
-                                    className="card"
+                                    className="level-item"
                         >
-                                    <div
-                                                className="card-content"
+                                    <h2
+                                                className="title"
                                     >
-                                                <div
-                                                            className="level"
-                                                >
-                                                            <h2
-                                                                        className="title level-item has-text-centered"
-                                                            >
-                                                                        Yes or No?
-                                                            </h2>
-                                                </div>
-                                                <div
-                                                            className="level"
-                                                >
-                                                            <p
-                                                                        className="subtitle level-item has-text-centered"
-                                                            >
-                                                                        by 
-                                                            </p>
-                                                </div>
-                                                <div
-                                                            className="level"
-                                                />
-                                                <VotePoll
-                                                            onVote={[Function]}
-                                                            poll={
-                                                                        Object {
-                                                                                    "_id": "1",
-                                                                                    "author": "123abc",
-                                                                                    "createdAt": 1000,
-                                                                                    "options": Array [
-                                                                                      Object {
-                                                                                        "_id": "101",
-                                                                                        "value": "Yes",
-                                                                                        "votes": 1,
-                                                                                      },
-                                                                                      Object {
-                                                                                        "_id": "102",
-                                                                                        "value": "No",
-                                                                                        "votes": 0,
-                                                                                      },
-                                                                                    ],
-                                                                                    "question": "Yes or No?",
-                                                                                    "voters": Array [
-                                                                                      "123abc",
-                                                                                    ],
-                                                                                  }
-                                                            }
-                                                />
-                                    </div>
+                                                Yes or No?
+                                    </h2>
                         </div>
             </div>
+            <div
+                        className="level"
+            >
+                        <div
+                                    className="level-item"
+                        >
+                                    <p
+                                                className="subtitle"
+                                    >
+                                                by 
+                                    </p>
+                        </div>
+            </div>
+            <div
+                        className="level"
+            >
+                        <div
+                                    className="level-item"
+                        />
+            </div>
+            <VotePoll
+                        onVote={[Function]}
+                        poll={
+                                    Object {
+                                                "_id": "1",
+                                                "author": "123abc",
+                                                "createdAt": 1000,
+                                                "options": Array [
+                                                  Object {
+                                                    "_id": "101",
+                                                    "value": "Yes",
+                                                    "votes": 1,
+                                                  },
+                                                  Object {
+                                                    "_id": "102",
+                                                    "value": "No",
+                                                    "votes": 0,
+                                                  },
+                                                ],
+                                                "question": "Yes or No?",
+                                                "voters": Array [
+                                                  "123abc",
+                                                ],
+                                              }
+                        }
+            />
 </div>,
           "className": "container",
         },
@@ -698,188 +566,86 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div
-              className="column is-half is-offset-one-quarter"
->
+            "children": Array [
               <div
-                            className="card"
-              >
-                            <div
-                                          className="card-content"
-                            >
-                                          <div
-                                                        className="level"
-                                          >
-                                                        <h2
-                                                                      className="title level-item has-text-centered"
-                                                        >
-                                                                      Yes or No?
-                                                        </h2>
-                                          </div>
-                                          <div
-                                                        className="level"
-                                          >
-                                                        <p
-                                                                      className="subtitle level-item has-text-centered"
-                                                        >
-                                                                      by 
-                                                        </p>
-                                          </div>
-                                          <div
-                                                        className="level"
-                                          />
-                                          <VotePoll
-                                                        onVote={[Function]}
-                                                        poll={
-                                                                      Object {
-                                                                                    "_id": "1",
-                                                                                    "author": "123abc",
-                                                                                    "createdAt": 1000,
-                                                                                    "options": Array [
-                                                                                      Object {
-                                                                                        "_id": "101",
-                                                                                        "value": "Yes",
-                                                                                        "votes": 1,
-                                                                                      },
-                                                                                      Object {
-                                                                                        "_id": "102",
-                                                                                        "value": "No",
-                                                                                        "votes": 0,
-                                                                                      },
-                                                                                    ],
-                                                                                    "question": "Yes or No?",
-                                                                                    "voters": Array [
-                                                                                      "123abc",
-                                                                                    ],
-                                                                                  }
-                                                        }
-                                          />
-                            </div>
-              </div>
-</div>,
-            "className": "columns is-mobile",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <div
-                className="card"
+                className="level"
 >
                 <div
-                                className="card-content"
+                                className="level-item"
                 >
-                                <div
-                                                className="level"
+                                <h2
+                                                className="title"
                                 >
-                                                <h2
-                                                                className="title level-item has-text-centered"
-                                                >
-                                                                Yes or No?
-                                                </h2>
-                                </div>
-                                <div
-                                                className="level"
-                                >
-                                                <p
-                                                                className="subtitle level-item has-text-centered"
-                                                >
-                                                                by 
-                                                </p>
-                                </div>
-                                <div
-                                                className="level"
-                                />
-                                <VotePoll
-                                                onVote={[Function]}
-                                                poll={
-                                                                Object {
-                                                                                "_id": "1",
-                                                                                "author": "123abc",
-                                                                                "createdAt": 1000,
-                                                                                "options": Array [
-                                                                                  Object {
-                                                                                    "_id": "101",
-                                                                                    "value": "Yes",
-                                                                                    "votes": 1,
-                                                                                  },
-                                                                                  Object {
-                                                                                    "_id": "102",
-                                                                                    "value": "No",
-                                                                                    "votes": 0,
-                                                                                  },
-                                                                                ],
-                                                                                "question": "Yes or No?",
-                                                                                "voters": Array [
-                                                                                  "123abc",
-                                                                                ],
-                                                                              }
-                                                }
-                                />
+                                                Yes or No?
+                                </h2>
                 </div>
 </div>,
-              "className": "column is-half is-offset-one-quarter",
-            },
-            "ref": null,
-            "rendered": Object {
+              <div
+                className="level"
+>
+                <div
+                                className="level-item"
+                >
+                                <p
+                                                className="subtitle"
+                                >
+                                                by 
+                                </p>
+                </div>
+</div>,
+              <div
+                className="level"
+>
+                <div
+                                className="level-item"
+                />
+</div>,
+              <VotePoll
+                onVote={[Function]}
+                poll={
+                                Object {
+                                                "_id": "1",
+                                                "author": "123abc",
+                                                "createdAt": 1000,
+                                                "options": Array [
+                                                  Object {
+                                                    "_id": "101",
+                                                    "value": "Yes",
+                                                    "votes": 1,
+                                                  },
+                                                  Object {
+                                                    "_id": "102",
+                                                    "value": "No",
+                                                    "votes": 0,
+                                                  },
+                                                ],
+                                                "question": "Yes or No?",
+                                                "voters": Array [
+                                                  "123abc",
+                                                ],
+                                              }
+                }
+/>,
+            ],
+            "className": "box",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className="card-content"
+                  className="level-item"
 >
-                  <div
-                                    className="level"
+                  <h2
+                                    className="title"
                   >
-                                    <h2
-                                                      className="title level-item has-text-centered"
-                                    >
-                                                      Yes or No?
-                                    </h2>
-                  </div>
-                  <div
-                                    className="level"
-                  >
-                                    <p
-                                                      className="subtitle level-item has-text-centered"
-                                    >
-                                                      by 
-                                    </p>
-                  </div>
-                  <div
-                                    className="level"
-                  />
-                  <VotePoll
-                                    onVote={[Function]}
-                                    poll={
-                                                      Object {
-                                                                        "_id": "1",
-                                                                        "author": "123abc",
-                                                                        "createdAt": 1000,
-                                                                        "options": Array [
-                                                                          Object {
-                                                                            "_id": "101",
-                                                                            "value": "Yes",
-                                                                            "votes": 1,
-                                                                          },
-                                                                          Object {
-                                                                            "_id": "102",
-                                                                            "value": "No",
-                                                                            "votes": 0,
-                                                                          },
-                                                                        ],
-                                                                        "question": "Yes or No?",
-                                                                        "voters": Array [
-                                                                          "123abc",
-                                                                        ],
-                                                                      }
-                                    }
-                  />
+                                    Yes or No?
+                  </h2>
 </div>,
-                "className": "card",
+                "className": "level",
               },
               "ref": null,
               "rendered": Object {
@@ -887,175 +653,145 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    <div
-                      className="level"
+                  "children": <h2
+                    className="title"
 >
-                      <h2
-                                            className="title level-item has-text-centered"
-                      >
-                                            Yes or No?
-                      </h2>
-</div>,
-                    <div
-                      className="level"
->
-                      <p
-                                            className="subtitle level-item has-text-centered"
-                      >
-                                            by 
-                      </p>
-</div>,
-                    <div
-                      className="level"
-/>,
-                    <VotePoll
-                      onVote={[Function]}
-                      poll={
-                                            Object {
-                                                                  "_id": "1",
-                                                                  "author": "123abc",
-                                                                  "createdAt": 1000,
-                                                                  "options": Array [
-                                                                    Object {
-                                                                      "_id": "101",
-                                                                      "value": "Yes",
-                                                                      "votes": 1,
-                                                                    },
-                                                                    Object {
-                                                                      "_id": "102",
-                                                                      "value": "No",
-                                                                      "votes": 0,
-                                                                    },
-                                                                  ],
-                                                                  "question": "Yes or No?",
-                                                                  "voters": Array [
-                                                                    "123abc",
-                                                                  ],
-                                                                }
-                      }
-/>,
-                  ],
-                  "className": "card-content",
+                    Yes or No?
+</h2>,
+                  "className": "level-item",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <h2
-                        className="title level-item has-text-centered"
->
-                        Yes or No?
-</h2>,
-                      "className": "level",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Yes or No?",
-                        "className": "title level-item has-text-centered",
-                      },
-                      "ref": null,
-                      "rendered": "Yes or No?",
-                      "type": "h2",
-                    },
-                    "type": "div",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Yes or No?",
+                    "className": "title",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <p
-                        className="subtitle level-item has-text-centered"
->
-                        by 
-</p>,
-                      "className": "level",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          "by ",
-                          undefined,
-                        ],
-                        "className": "subtitle level-item has-text-centered",
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        "by ",
-                        undefined,
-                      ],
-                      "type": "p",
-                    },
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": undefined,
-                      "className": "level",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "onVote": [Function],
-                      "poll": Object {
-                        "_id": "1",
-                        "author": "123abc",
-                        "createdAt": 1000,
-                        "options": Array [
-                          Object {
-                            "_id": "101",
-                            "value": "Yes",
-                            "votes": 1,
-                          },
-                          Object {
-                            "_id": "102",
-                            "value": "No",
-                            "votes": 0,
-                          },
-                        ],
-                        "question": "Yes or No?",
-                        "voters": Array [
-                          "123abc",
-                        ],
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                ],
+                  "ref": null,
+                  "rendered": "Yes or No?",
+                  "type": "h2",
+                },
                 "type": "div",
               },
               "type": "div",
             },
-            "type": "div",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="level-item"
+>
+                  <p
+                                    className="subtitle"
+                  >
+                                    by 
+                  </p>
+</div>,
+                "className": "level",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="subtitle"
+>
+                    by 
+</p>,
+                  "className": "level-item",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "by ",
+                      undefined,
+                    ],
+                    "className": "subtitle",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "by ",
+                    undefined,
+                  ],
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="level-item"
+/>,
+                "className": "level",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "level-item",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "onVote": [Function],
+                "poll": Object {
+                  "_id": "1",
+                  "author": "123abc",
+                  "createdAt": 1000,
+                  "options": Array [
+                    Object {
+                      "_id": "101",
+                      "value": "Yes",
+                      "votes": 1,
+                    },
+                    Object {
+                      "_id": "102",
+                      "value": "No",
+                      "votes": 0,
+                    },
+                  ],
+                  "question": "Yes or No?",
+                  "voters": Array [
+                    "123abc",
+                  ],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         "type": "div",
       },
-      "type": "div",
+      "type": "section",
     },
   ],
   Symbol(enzyme.__options__): Object {

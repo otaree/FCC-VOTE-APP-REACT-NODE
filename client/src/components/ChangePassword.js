@@ -76,44 +76,61 @@ export class ChangePassword extends React.Component {
 
     render() {
         return (
-            <section className="auth">
-                {
-                    this.props.authError.isError &&
-                    <div className="auth-server-fail">{this.props.authError.value}</div>
-                }
-                <form className="form" onSubmit={this.submitHandler}>
-                    <div className="form-control">
-                        <input 
-                            type="password"
-                            placeholder="New Password"
-                            value={this.state.password.value} 
-                            onChange={this.passwordChangeHandler}
-                        />
-                        {
-                             this.state.password.error &&
-                             <div className="auth-error">Invalid password</div>
-                         }
+            <section className="section">
+                    <div className="container">
+                    {
+                        this.props.authError.isError &&
+                        <div className="notification is-danger auth-error">
+                            <button className="delete"></button>
+                            {this.props.authError.value}
+                        </div>
+                    }
+                    <div className="columns">
+                        <div className="column is-half is-offset-one-quarter">
+                            <form onSubmit={this.submitHandler}>
+                                <div className="field">
+                                    <label className="label">New Password</label>
+                                    <div className="control">
+                                        <input 
+                                            className="input"
+                                            type="password"
+                                            placeholder="New Password"
+                                            value={this.state.password.value} 
+                                            onChange={this.passwordChangeHandler}
+                                        />
+                                        {
+                                             this.state.password.error &&
+                                             <div className="auth-error">Invalid password</div>
+                                         }
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <label className="label">Confirm Password</label>
+                                    <div className="control">
+                                        <input 
+                                            className="input"
+                                            type="password"
+                                            placeholder="Confirm Password"   
+                                            value={this.state.password2.value} 
+                                            onChange={this.password2ChangeHandler}
+                                        />
+                                        {
+                                             this.state.password2.error &&
+                                             <div className="auth-error">Passwords dose not match</div>
+                                         }
+                                    </div>
+                                </div>
+                                <div className="control">
+                                    <input 
+                                        className="button is-success"
+                                        type="submit"
+                                        value="Change Password"    
+                                    />
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div className="form-control">
-                        <input 
-                            type="password"
-                            placeholder="Confirm Password"   
-                            value={this.state.password2.value} 
-                            onChange={this.password2ChangeHandler}
-                        />
-                        {
-                             this.state.password2.error &&
-                             <div className="auth-error">Passwords dose not match</div>
-                         }
-                    </div>
-                    <div className="form-control">
-                        <input 
-                            className="btn"
-                            type="submit"
-                            value="Change Password"    
-                        />
-                    </div>
-                </form>
+                </div>
             </section>
         );
     }

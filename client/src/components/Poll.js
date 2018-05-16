@@ -6,7 +6,6 @@ import { isEmpty } from 'lodash';
 import PollStats from './PollStats';
 import VotePoll from './VotePoll';
 import * as pollActions from '../store/actions/poll';
-// import "./Poll.css";
 
 export class Poll extends React.Component {
     async componentDidMount() {
@@ -29,59 +28,42 @@ export class Poll extends React.Component {
         let editButton;
         if (this.props.poll) {
             if (this.props.userId) {
-                editButton = this.props.userId === this.props.poll.author._id ? (<Link className="level-item has-text-centered" to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>) : null;
+                editButton = this.props.userId === this.props.poll.author._id ? (
+                    <div className="level-item ">
+                        <Link className="button is-info" to={`/poll/${this.props.poll._id}/edit`}>Edit</Link>
+                    </div>
+                        ) : null;
             }
-            if (this.props.poll.voters.indexOf(this.props.uid) === -1) {
-                poll = (
-                    <div className="section">
-                        <div className="container">
-                            <div className="columns is-mobile">
-                                <div className="column is-half is-offset-one-quarter">
-                                    <div className="card">
-                                        <div className="card-content">
-                                            <div className="level">
-                                                <h2 className="title level-item has-text-centered">{this.props.poll.question}</h2>
-                                            </div>
-                                            <div className="level">
-                                                <p className="subtitle level-item has-text-centered">by {this.props.poll.author.name}</p>
-                                            </div>
-                                            <div className="level">
-                                                { editButton }
-                                            </div>
-                                            <VotePoll poll={this.props.poll} onVote={this.voteHandler} />
-                                        </div>
-                                    </div>
+            poll = (
+                <section className="section">
+                    <div className="container">
+                        <div className="box">
+                            <div className="level">
+                                <div className="level-item">
+                                    <h2 className="title">{this.props.poll.question}</h2>                                        
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                );                
-            } else {
-                poll = (
-                    <div className="section">
-                        <div className="container">
-                            <div className="columns is-mobile">
-                                <div className="column is-half is-offset-one-quarter">
-                                    <div className="card">
-                                        <div className="card-content">
-                                            <div className="level">
-                                                <h2 className="title level-item has-text-centered">{this.props.poll.question}</h2>
-                                            </div>
-                                            <div className="level">
-                                                <p className="subtitle level-item has-text-centered">by {this.props.poll.author.name}</p>
-                                            </div>
-                                            <div className="level">
-                                                { editButton }
-                                            </div>
-                                            <PollStats poll={this.props.poll} />
-                                        </div>
+                                <div className="level">
+                                    <div className="level-item">
+                                        <p className="subtitle">by {this.props.poll.author.name}</p>                                            
                                     </div>
                                 </div>
+                            <div className="level">
+                                <div className="level-item">
+                                    {editButton}                                        
+                                </div>
                             </div>
+                            {
+                                this.props.poll.voters.indexOf(this.props.uid) === -1 ? (
+                                    <VotePoll poll={this.props.poll} onVote={this.voteHandler}/>
+                                ): (
+                                    <PollStats poll={this.props.poll} />
+                                )
+                            }
                         </div>
                     </div>
-                );
-            }
+                </section>
+            );
         }
         return poll;
     }

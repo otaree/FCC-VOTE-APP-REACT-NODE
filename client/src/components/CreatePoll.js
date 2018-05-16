@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as pollActions from '../store/actions/poll';
-import "./PollForm.css";
+// import "./PollForm.css";
 
 export class CreatePoll extends React.Component {
     state = {
@@ -95,45 +95,61 @@ export class CreatePoll extends React.Component {
 
     render() {
         let createPoll = (
-            <div className="Poll_form_container">
-                <form className="Poll__form" onSubmit={this.submitHandler}>
-                    <div className="Poll__form__control">
-                        <input 
-                            className="Poll__form_question"
-                            type="text"
-                            placeholder="Question"
-                            value={this.state.question}
-                            onChange={this.questionChangeHandler}
-                        />
-                    </div>
-                    <div className="Poll__form__control">
-                        {
-                            this.state.options.map((option, index) => {
-                                return (
-                                    <input
-                                        key={index}
-                                        className="Poll__form_option"
-                                        type="text" 
-                                        placeholder={`Option ${index + 1}`}
-                                        value={option.value}
-                                        onChange={e => this.optionsChangeHandler(e, index)}
-                                    />
-                                )
-                            })
-                        }
-                       <div className="add__container"> 
-                           <button className="addOption__btn" onClick={this.addOptions}>Add Option</button>
+            <section className="section">
+                <div className="container">
+                    <div className="columns">
+                        <div className="column is-half is-offset-one-quarter">
+                            <form onSubmit={this.submitHandler}>
+                                <div className="field">
+                                    <label className="label">Question</label>
+                                    <div className="control">
+                                        <input 
+                                            className="input"
+                                            type="text"
+                                            placeholder="Question"
+                                            value={this.state.question}
+                                            onChange={this.questionChangeHandler}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="field">
+                                    <label className="label">Options</label>
+                                        <div className="control">
+                                        {
+                                            this.state.options.map((option, index) => {
+                                                return (
+                                                    <input
+                                                        key={index}
+                                                        className="input"
+                                                        type="text" 
+                                                        placeholder={`Option ${index + 1}`}
+                                                        value={option.value}
+                                                        onChange={e => this.optionsChangeHandler(e, index)}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                        </div>
+                                    </div>
+                                   <div className="level"> 
+                                        <div className="level-item">
+                                            <button className="button is-warning is-small addOption" onClick={this.addOptions}>Add Option</button>                                            
+                                        </div>
+                                    </div>
+                                <div className="level">
+                                    <div className="level-item">
+                                        <input 
+                                            className="button is-medium is-success"
+                                            type="submit"
+                                            value="Create Poll"
+                                        />
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div className="Poll_submit_container">
-                        <input 
-                            className="submit__btn"
-                            type="submit"
-                            value="Create Poll"
-                        />
-                    </div>
-                </form>
-            </div>
+                </div>
+            </section>
         );
 
         if (this.props.loading) {

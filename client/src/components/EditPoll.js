@@ -152,49 +152,69 @@ export class EditPoll extends React.Component {
         let updatePoll = <h2 style={{ textAlign: "center" }}>Loading...</h2>;
         if (this.state.poll && !this.props.loading) {
             updatePoll = (
-                <div className="Poll_form_container"> 
-                    <form className="Poll__form" onSubmit={this.submitHandler}>
-                        <div className="Poll__form__control">
-                            <input 
-                                className="Poll__form_question"
-                                type="text"
-                                placeholder="Question"
-                                value={this.state.poll.question}
-                                onChange={this.questionChangeHandler}
-                            />
-                        </div>
-                        <div className="Poll__form__control">
-                            {
-                                this.state.poll.options.map((option, index) => {
-                                    return (
-                                        <div key={index}>
-                                            <input
-                                                className="Poll__form_option"
-                                                type="text" 
-                                                placeholder={`Option ${index + 1}`}
-                                                value={option.value}
-                                                onChange={e => this.optionsChangeHandler(e, index)}
+                <section className="section">
+                    <div className="container">
+                        <div className="columns">
+                            <div className="column is-half is-offset-one-quarter">
+                                <form onSubmit={this.submitHandler}>
+                                    <div className="field">
+                                        <label className="label">Question</label>
+                                        <div className="control">
+                                            <input 
+                                                className="input"
+                                                type="text"
+                                                placeholder="Question"
+                                                value={this.state.poll.question}
+                                                onChange={this.questionChangeHandler}
                                             />
-                                            <span className="remove__option" onClick={e => this.removeOptionsHandler(e, index)}>X</span>
                                         </div>
-                                    )
-                                })
-                            }
-                             <div className="add__container"> 
-                                <button className="addOption__btn" onClick={this.addOptions}>Add Option</button>
+                                    </div>
+                                    <div className="field">
+                                        <label className="label">Options</label>
+                                            {
+                                                this.state.poll.options.map((option, index) => {
+                                                    return (
+                                                        <div key={index} className="field has-addons">
+                                                            <div className="control has-icons-right is-expanded">
+                                                                <input
+                                                                    className="input"
+                                                                    type="text" 
+                                                                    placeholder={`Option ${index + 1}`}
+                                                                    value={option.value}
+                                                                    onChange={e => this.optionsChangeHandler(e, index)}
+                                                                />
+                                                            </div>
+                                                            <div className="control">
+                                                                <button className="delete removeOption" onClick={e => this.removeOptionsHandler(e, index)}></button>                                                                
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                    <div className="level"> 
+                                        <div className="level-item">
+                                            <button className="button is-warning is-small addOption" onClick={this.addOptions}>Add Option</button>                                            
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div className="field is-grouped">
+                                        <div className="control">
+                                            <input 
+                                                className="button is-success"
+                                                type="submit"
+                                                value="Update Poll"
+                                            />
+                                        </div>
+
+                                        <div className="control">
+                                            <button className="button is-danger" onClick={this.deletePoll}>Delete Poll</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div className="Poll_submit_container">
-                            <input 
-                                className="submit__btn"
-                                type="submit"
-                                value="Update Poll"
-                            />
-                            <button className="Poll_delete__btn" onClick={this.deletePoll}>Delete Poll</button>
-                        </div>
-                    </form>
-                </div>
-            );
+                    </div>
+                </section>);
         }
         return updatePoll;
     }

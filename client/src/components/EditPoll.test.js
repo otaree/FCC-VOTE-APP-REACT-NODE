@@ -50,7 +50,7 @@ describe("EditPoll", () => {
         });
 
         it('should add option', () => {
-            editPoll.find('.addOption__btn').simulate('click', {
+            editPoll.find('.addOption').simulate('click', {
                 preventDefault: () => {}
             });
             expect(editPoll.state('poll').options.length).toEqual(3);
@@ -68,7 +68,7 @@ describe("EditPoll", () => {
         });
 
         it("should remove option", () => {
-            editPoll.find(".remove__option").at(0).simulate("click", {
+            editPoll.find(".removeOption").at(0).simulate("click", {
                 preventDefault: () => {}
             });
             expect(editPoll.state('poll').options.length).toEqual(1);
@@ -104,7 +104,7 @@ describe("EditPoll", () => {
         });
 
         it('should correctly submit the form', () => {
-            editPoll.find(".remove__option").at(0).simulate("click", {
+            editPoll.find(".removeOption").at(0).simulate("click", {
                 preventDefault: () => {}
             });
             editPoll.find("form").simulate("submit", {

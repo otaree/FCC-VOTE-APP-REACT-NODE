@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './VotePoll.css';
-
 export default class VotePoll extends React.Component {
     state = {
         selected: null
@@ -20,28 +18,33 @@ export default class VotePoll extends React.Component {
         return (
             <div className="VotePoll">
                 <form onSubmit={this.handleSubmit}>
-                    {
-                        this.props.poll.options.map(option => {
-                            return (
-                                <div key={option._id}>
-                                    <input 
-                                        type="radio"
-                                        name="vote"
-                                        value={option._id}
-                                        onChange={this.handleChange}
-                                    />
-                                    {option.value}
-                                    <br />
-                                </div>
-                            );
-                        })
-                    }
-                    <div className="vote_Button">
-                        <input 
-                            className="vote__btn"
-                            type="submit"
-                            value="Vote"
-                        />
+                    <div className="level"> 
+                        <div className="control level-item">
+                        {
+                            this.props.poll.options.map(option => {
+                                return (
+                                        <label key={option._id} className="radio">
+                                            <input 
+                                                type="radio"
+                                                name="vote"
+                                                value={option._id}
+                                                onChange={this.handleChange}
+                                            />
+                                             {option.value}
+                                        </label>
+                                );
+                            })
+                        }
+                        </div>
+                    </div>
+                    <div className="level">
+                        <div className="level-item">
+                            <input 
+                                className="button is-success"
+                                type="submit"
+                                value="Vote"
+                            />
+                        </div>
                     </div>
                 </form>
             </div>
