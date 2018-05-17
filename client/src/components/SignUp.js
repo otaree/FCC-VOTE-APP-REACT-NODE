@@ -143,6 +143,11 @@ export class SignUp extends React.Component {
                         {this.props.authError.value}
                     </div>
                 }
+                <div className="level">
+                        <div className="level-item">
+                            <div className="title">SignUp</div>
+                        </div>
+                </div>
                 <div className="columns is-mobile">
                     <div className="column is-half is-offset-one-quarter">
                         <form  onSubmit={this.submitHandler}>

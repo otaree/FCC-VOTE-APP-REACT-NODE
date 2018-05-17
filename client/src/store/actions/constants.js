@@ -11,3 +11,4 @@ export const POLL_SUCCESS = "POLL_SUCCESS";
 export const POLL_FAIL = "POLL_FAIL";
 export const POLL_SET_POLLS = "POLL_SET_POLLS";
 export const POLL_SET = "POLL_SET";
+export const POLL_UNSET = "POLL_UNSET";

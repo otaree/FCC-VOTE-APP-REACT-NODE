@@ -78,6 +78,11 @@ describe('Poll Actions', () => {
         });
     });
 
+    it('should generate unset poll action', () => {
+        const action = actions.unsetPoll();
+        expect(action).toEqual({ type: constants.POLL_UNSET });
+    });
+
     describe('Async actions', () => {
         beforeEach(() => {
             createMockStore = configureStore([thunk]);

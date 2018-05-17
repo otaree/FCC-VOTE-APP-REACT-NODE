@@ -44,6 +44,12 @@ export default (state=initialState, action) => {
                 error: action.error,
                 poll: action.poll
             };
+
+        case constants.POLL_UNSET:
+            return {
+                ...state,
+                poll: {}
+            }
         default:
             return state;
     } 

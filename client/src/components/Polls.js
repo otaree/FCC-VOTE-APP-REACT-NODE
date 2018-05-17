@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import PollsList from './PollsList';
 import * as pollActions from '../store/actions/poll';
-// import "./Polls.css";
 
 export class Polls extends React.Component {
     async componentDidMount() {
@@ -12,11 +11,18 @@ export class Polls extends React.Component {
     render() {
         let polls = (
             <div className="section">
-                {
-                    this.props.polls.length > 0 ? 
-                    (<PollsList polls={this.props.polls} />) :
-                    (<div style={{ textAlign: "center" }}>No Polls</div>)
-                }
+                <div className="container">
+                    <div className="level">
+                        <div className="level-item">
+                            <div className="title has-text-info">Polls</div>
+                        </div>
+                    </div>
+                    {
+                        this.props.polls.length > 0 ? 
+                        (<PollsList polls={this.props.polls} />) :
+                        (<div style={{ textAlign: "center" }}>No Polls</div>)
+                    }
+                </div>
             </div>
         );
         if (this.props.loading) {

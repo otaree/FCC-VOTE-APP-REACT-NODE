@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
-import PollStats from './PollStats';
+import Chart from './Chart';
 import VotePoll from './VotePoll';
 import * as pollActions from '../store/actions/poll';
 
@@ -11,6 +11,10 @@ export class Poll extends React.Component {
     async componentDidMount() {
         const id = this.props.match.params.id;
         await this.props.fetchPoll(id);
+    }
+
+    componentWillUnmount() {
+        this.props.unsetPoll();
     }
 
     voteHandler = async (optionsId) => {
@@ -57,7 +61,7 @@ export class Poll extends React.Component {
                                 this.props.poll.voters.indexOf(this.props.uid) === -1 ? (
                                     <VotePoll poll={this.props.poll} onVote={this.voteHandler}/>
                                 ): (
-                                    <PollStats poll={this.props.poll} />
+                                    <Chart poll={this.props.poll} />
                                 )
                             }
                         </div>
@@ -82,7 +86,8 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchPoll: (id) => dispatch(pollActions.fetchPoll(id)),
         vote: (id, optionId, uid) => dispatch(pollActions.votePoll(id, optionId, uid)),
-        setPoll: (poll) => dispatch(pollActions.setPoll(poll))
+        setPoll: (poll) => dispatch(pollActions.setPoll(poll)),
+        unsetPoll: () => dispatch(pollActions.unsetPoll())
     };
 }
 

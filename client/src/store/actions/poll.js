@@ -76,6 +76,12 @@ export const fetchPoll = (id) => {
     };
 };
 
+export const unsetPoll = () => {
+    return {
+        type: constants.POLL_UNSET
+    };
+}
+
 export const createPoll = (poll, token) => {
     return async dispatch => {
         dispatch(pollLoading());

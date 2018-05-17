@@ -85,6 +85,11 @@ export class ChangePassword extends React.Component {
                             {this.props.authError.value}
                         </div>
                     }
+                    <div className="level">
+                        <div className="level-item">
+                            <div className="title">Change Password</div>
+                        </div>
+                    </div>
                     <div className="columns">
                         <div className="column is-half is-offset-one-quarter">
                             <form onSubmit={this.submitHandler}>
