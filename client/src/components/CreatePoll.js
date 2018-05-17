@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as pollActions from '../store/actions/poll';
-// import "./PollForm.css";
 
 export class CreatePoll extends React.Component {
     state = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../axios-poll';
 
 export class UserPolls extends React.Component {
     state = {
@@ -17,7 +17,7 @@ export class UserPolls extends React.Component {
     fetchPolls = async () => {
         try {
             this.setState({ loading: true });
-            const response = await axios({ url: "http://localhost:5000/polls/user", method: "get", headers: { "x-auth": this.props.token } });
+            const response = await axios({ url: "/polls/user", method: "get", headers: { "x-auth": this.props.token } });
             this.setState({
                 polls: response.data,
                 error: false,

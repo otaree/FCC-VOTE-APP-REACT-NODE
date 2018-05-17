@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import isEmail from 'validator/lib/isEmail';
-import axios from 'axios';
+import axios from '../axios-poll';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 
 import * as authActions from '../store/actions/auth';
@@ -38,7 +38,7 @@ export class Login extends React.Component {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/user/login", user);
+            const response = await axios.post("/user/login", user);
             this.props.login({ ...response.data, token: response.headers['x-auth'] });
             this.props.history.push('/');
         } catch (e) {

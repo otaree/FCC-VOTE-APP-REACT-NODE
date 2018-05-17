@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../axios-poll';
 
 import * as constants from './constants';
 
@@ -50,7 +50,7 @@ export const fetchPolls = () => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios.get('http://localhost:5000/polls');
+            const response = await axios.get('/polls');
             dispatch(setPolls(response.data));
             return Promise.resolve("PASS");
         } catch (e) {
@@ -66,7 +66,7 @@ export const fetchPoll = (id) => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios.get(`http://localhost:5000/poll/${id}`);
+            const response = await axios.get(`/poll/${id}`);
             dispatch(setPoll(response.data));
             return Promise.resolve();
         } catch (e) {
@@ -87,7 +87,7 @@ export const createPoll = (poll, token) => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios({ url: "http://localhost:5000/poll", method: "post", headers: { "x-auth": token }, data: poll });
+            const response = await axios({ url: "/poll", method: "post", headers: { "x-auth": token }, data: poll });
             dispatch(pollSuccess());
             return response.data;
         } catch (e) {
@@ -102,7 +102,7 @@ export const updatePoll = (poll, token, id) => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios({ url: `http://localhost:5000/poll/${id}`, method: "patch", headers: { "x-auth": token }, data: poll });
+            const response = await axios({ url: `/poll/${id}`, method: "patch", headers: { "x-auth": token }, data: poll });
             dispatch(pollSuccess());
             return response.data;
         } catch (e) {
@@ -117,7 +117,7 @@ export const deletePoll = (token, id) => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios({ url: `http://localhost:5000/poll/${id}`, method: "delete", headers: { "x-auth": token } });
+            const response = await axios({ url: `/poll/${id}`, method: "delete", headers: { "x-auth": token } });
             dispatch(pollSuccess());
             return response.data;
         } catch (e) {
@@ -132,7 +132,7 @@ export const votePoll = (id, optionId, uid) => {
         dispatch(pollLoading());
 
         try {
-            const response = await axios({ url: `http://localhost:5000/poll/${id}/vote`, method: "patch", data: { option: optionId, uid } });
+            const response = await axios({ url: `/poll/${id}/vote`, method: "patch", data: { option: optionId, uid } });
             dispatch(pollSuccess());
             return response.data;
         } catch (e) {

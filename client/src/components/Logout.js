@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import axios from '../axios-poll';
 
 import * as authActions from '../store/actions/auth';
 
 export class Logout extends React.Component {
    async componentDidMount () {
         try {
-            await axios({ url: "http://localhost:5000/user/logout", method: 'delete', headers: { 'x-auth': this.props.token } });
+            await axios({ url: "/user/logout", method: 'delete', headers: { 'x-auth': this.props.token } });
             this.props.logout();
             this.props.history.push("/");
         } catch (e) {

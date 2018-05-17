@@ -1,5 +1,6 @@
 require('./config/config');
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
 const ObjectId = require('mongoose').Types.ObjectId;
@@ -11,7 +12,9 @@ const { authenticate } = require('./middleware/authenticate');
 
 const app = express();
 const port = process.env.PORT || 5000;
+// const publicPath = path.join(__dirname, "..", "client", "build");
 
+app.use(express.static(path.join(__dirname,"..", "client", 'build')));
 app.use(bodyParser.json());
 // configure CORS
 app.use((req, res, next) => {
@@ -216,6 +219,9 @@ app.patch('/user/password/change', authenticate, async (req, res) => {
     }
 });
 
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+ });
 
 app.listen(port, () => {
     console.log(`server is up at port ${port}`);

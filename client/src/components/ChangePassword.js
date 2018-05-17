@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import axios from '../axios-poll';
 
 import * as authActions from '../store/actions/auth';
 
@@ -37,7 +37,7 @@ export class ChangePassword extends React.Component {
         if (this.validation()) return;
 
         try {
-            await axios({ method: "patch", url: "http://localhost:5000/user/password/change", data: { password: this.state.password.value }, headers: { 'x-auth': this.props.token } });
+            await axios({ method: "patch", url: "/user/password/change", data: { password: this.state.password.value }, headers: { 'x-auth': this.props.token } });
             this.props.history.push('/');
         } catch (e) {
             this.props.changeFail();
